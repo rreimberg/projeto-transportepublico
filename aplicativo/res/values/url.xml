@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="webservice_url_base">http://nanoitbrasil.com.br/CoO/ServiceV2/CoOService.svc/</string>
-    <string name="webservice_pesquisaLinha">PesquisarLinha/Linha/@Linha/ApplicationId/@ApplicationId/DeviceId/@DeviceId</string>
-</resources>
