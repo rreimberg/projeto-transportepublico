@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+tela_pesquisa/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/telapesquisa_label_pesquisa" />
+
+    <EditText
+        android:id="@+tela_pesquisa/busca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+tela_pesquisa/textView1"
+        android:layout_toLeftOf="@+tela_pesquisa/pesquisar"
+        android:ems="10" />
+
+    <ImageButton
+        android:id="@+tela_pesquisa/pesquisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+tela_pesquisa/busca"
+        android:layout_toRightOf="@+tela_pesquisa/textView1"
+        android:src="@drawable/ic_launcher" />
+
+    <ListView
+        android:id="@+tela_pesquisa/lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+tela_pesquisa/pesquisar" >
+
+    </ListView>
+
+</RelativeLayout>
