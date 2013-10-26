@@ -1,0 +1,8 @@
+*.swp
+*.iml
+*.log
+*/.idea
+*/bin
+*/gen
+*/out
+build-log.xml
