@@ -6,32 +6,28 @@
               android:layout_height="wrap_content"
               >
 
-    <Button
-            android:layout_width="@dimen/menu_button_width"
-            android:layout_height="@dimen/menu_button_height"
-            android:text="@string/journey"
+    <ImageButton
+            android:layout_width="194dp"
+            android:layout_height="fill_parent"
             android:id="@+navigation_menu/journey"
-            android:layout_gravity="center_horizontal|top"/>
+            android:background="@drawable/viagem"/>
 
-    <Button
-            android:layout_width="@dimen/menu_button_width"
-            android:layout_height="@dimen/menu_button_height"
-            android:text="@string/traffic"
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
             android:id="@+navigation_menu/traffic"
-            android:layout_gravity="center_horizontal|top"/>
+            android:background="@drawable/transito"/>
 
-    <Button
-            android:layout_width="@dimen/menu_button_width"
-            android:layout_height="@dimen/menu_button_height"
-            android:text="@string/stocking"
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
             android:id="@+navigation_menu/stocking"
-            android:layout_gravity="center_horizontal|top"/>
+            android:background="@drawable/lotacao"/>
 
-    <Button
-            android:layout_width="@dimen/menu_button_width"
-            android:layout_height="@dimen/menu_button_height"
-            android:text="@string/alerts"
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
             android:id="@+navigation_menu/alert"
-            android:layout_gravity="center_horizontal|top"/>
+            android:background="@drawable/alertas"/>
 
 </LinearLayout>
