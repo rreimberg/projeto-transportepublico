@@ -39,7 +39,7 @@ public class FavoritoListView extends BaseAdapter{
 
 	@Override
 	public View getView(int posicao, View arg1, ViewGroup arg2) {
-		// Cria uma inst√¢ncia do layout XML para os objetos correspondentes
+		// Cria uma inst‚ncia do layout XML para os objetos correspondentes
         LayoutInflater inflater = (LayoutInflater)
         _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(_view, null);
