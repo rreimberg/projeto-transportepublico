@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/navigation_menu"
+            android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/linearLayout"
+                android:gravity="center">
+
+            <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Roubo"
+                    android:id="@+id/button"/>
+
+            <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="fill_parent"
+                    android:text="Ataque / depredação ao patrimônio"
+                    android:id="@+id/button2"/>
+
+            <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Incêndio"
+                    android:id="@+id/button3"/>
+
+            <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Bagunça"
+                    android:id="@+id/button4"/>
+
+            <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Som alto"
+                    android:id="@+id/button5"/>
+
+            <Button
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Outros"
+                    android:id="@+id/button6"/>
+        </LinearLayout>
+
+
+        <EditText
+                android:layout_width="@dimen/notes_width"
+                android:layout_height="@dimen/notes_height"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="22dp"/>
+
+        <Button
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/send"
+                android:id="@+id/button4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginBottom="22dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

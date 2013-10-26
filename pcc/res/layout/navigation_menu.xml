@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              >
+
+    <Button
+            android:layout_width="@dimen/menu_button_width"
+            android:layout_height="@dimen/menu_button_height"
+            android:text="@string/journey"
+            android:id="@+navigation_menu/journey"
+            android:layout_gravity="center_horizontal|top"/>
+
+    <Button
+            android:layout_width="@dimen/menu_button_width"
+            android:layout_height="@dimen/menu_button_height"
+            android:text="@string/traffic"
+            android:id="@+navigation_menu/traffic"
+            android:layout_gravity="center_horizontal|top"/>
+
+    <Button
+            android:layout_width="@dimen/menu_button_width"
+            android:layout_height="@dimen/menu_button_height"
+            android:text="@string/stocking"
+            android:id="@+navigation_menu/stocking"
+            android:layout_gravity="center_horizontal|top"/>
+
+    <Button
+            android:layout_width="@dimen/menu_button_width"
+            android:layout_height="@dimen/menu_button_height"
+            android:text="@string/alerts"
+            android:id="@+navigation_menu/alert"
+            android:layout_gravity="center_horizontal|top"/>
+
+</LinearLayout>

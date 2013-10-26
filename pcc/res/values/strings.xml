@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" >Painel de Controle do Cobrador</string>
+    <string name="action_settings" >Settings</string>
+    <string name="journey">Viagem</string>
+    <string name="traffic">Transito</string>
+    <string name="alerts">Alertas</string>
+    <string name="search">Pesquisar</string>
+    <string name="stocking">Lotação</string>
+    <string name="start">Iniciar Viagem</string>
+    <string name="bus_prefix">Prefixo do ônibus</string>
+    <string name="trip_id">Linha</string>
+    <string name="traffic_easy">Fluindo</string>
+    <string name="traffic_medium">Trânsito</string>
+    <string name="traffic_hard">Congestionado</string>
+    <string name="status">Estado Atual:</string>
+    <string name="historical">Histórico</string>
+    <string name="send">Enviar</string>
+
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Elements margins -->
+    <dimen name="lines_vertical_margin">16dp</dimen>
+
+    <!-- Elements size -->
+    <dimen name="notes_height">150dp</dimen>
+    <dimen name="notes_width">900dp</dimen>
+
+    <dimen name="button_height">100dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+
+    <dimen name="menu_button_height">150dp</dimen>
+    <dimen name="menu_button_width">150dp</dimen>
+
+</resources>
