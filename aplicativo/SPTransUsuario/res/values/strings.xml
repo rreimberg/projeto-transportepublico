@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cadê o Ônibus? (SPTrans)</string>
+    
+    <!-- Google Map -->
+    <string name="googlemaps_id_v2">AIzaSyC_8cd05POLMR8S1xp7JA5kCcxQGRyHaG8</string> 
+    <!-- AIzaSyC_8cd05POLMR8S1xp7JA5kCcxQGRyHaG8 Debug -->
+    
+    
+    <!-- WebService -->
+    <string name="webservice_conexao_lenta">Pesquisa uma linha por nome ou número.</string>
+    
+    <!-- Tela Pesquisa -->
+    <string name="telapesquisa_label_pesquisa">Pesquisa uma linha por nome ou número.</string>
+
+    <!-- Geral -->
+    <string name="geral_atualizado_sucesso">Atualização realizada com sucesso.</string>
+    <string name="geral_erro_inesperado">Ocorreu um erro inesperado.</string>
+    
+    <!-- Tela Ônibus -->
+    
+    <!-- Tela Pontos -->
+    
+    <!-- Tela Favoritos -->
+    <string name="telafavorito_removido_sucesso">Favorito removido com sucesso.</string>
+    <string name="telafavorito_selecione_linha">Selecione uma linha para abrir o mapa.</string>
+    
+    <!-- Tela Pesquisa -->
+    <string name="telapesquisa_adicionado_sucesso">Favorito adicionado com sucesso.</string>
+</resources>

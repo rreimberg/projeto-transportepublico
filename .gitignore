@@ -2,7 +2,8 @@
 *.iml
 *.log
 */.idea
-*/bin
-*/gen
+*bin
+*gen
 */out
+*/.metadata
 build-log.xml
