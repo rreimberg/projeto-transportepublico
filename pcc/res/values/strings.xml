@@ -10,7 +10,7 @@
     <string name="stocking">Lotação</string>
     <string name="start">Iniciar Viagem</string>
     <string name="bus_prefix">Prefixo do ônibus</string>
-    <string name="trip_id">Linha</string>
+    <string name="route_id">Linha</string>
     <string name="traffic_easy">Fluindo</string>
     <string name="traffic_medium">Trânsito</string>
     <string name="traffic_hard">Congestionado</string>

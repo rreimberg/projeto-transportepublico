@@ -27,38 +27,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/trip_id"
+                android:text="@string/route_id"
                 android:id="@+id/textView"
                 android:layout_gravity="center|top"
-                android:layout_alignBottom="@+id/editText"
+                android:layout_alignBottom="@+journey/route_id"
                 android:layout_alignParentLeft="true"/>
 
         <EditText
                 android:layout_width="391dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
+                android:id="@+journey/route_id"
                 android:inputType="text"
-                android:layout_weight="1.11"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/textView"
-                android:layout_marginLeft="33dp"/>
+                android:layout_marginLeft="23dp"
+                android:layout_alignBottom="@+journey/search_trip"
+                android:layout_toRightOf="@+id/textView4"/>
 
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/search"
-                android:id="@+id/button4"
+                android:id="@+journey/search_trip"
                 android:layout_gravity="center_horizontal|top"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/editText"/>
+                android:layout_toRightOf="@+journey/route_id"/>
 
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Jardim Herplin -> Pça da Árvore"
-                android:id="@+id/textView2"
-                android:layout_toRightOf="@+id/button4"
+                android:id="@+journey/trip_headsign"
+                android:layout_toRightOf="@+journey/search_trip"
                 android:layout_marginLeft="22dp"
                 android:layout_alignTop="@+id/textView"
                 android:layout_alignParentRight="true"/>
@@ -67,48 +66,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/bus_prefix"
-                android:id="@+id/textView3"
-                android:layout_below="@+id/button4"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="@dimen/lines_vertical_margin"/>
-
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/editText2"
-                android:layout_alignTop="@+id/textView3"
-                android:layout_toRightOf="@+id/textView3"
-                android:layout_alignRight="@+id/button5"
-                android:layout_marginTop="@dimen/lines_vertical_margin"
-                android:inputType="number"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Número da Catraca"
+                android:text="Contador"
                 android:id="@+id/textView4"
-                android:layout_below="@+id/editText2"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="@dimen/lines_vertical_margin"/>
+                android:layout_marginTop="@dimen/lines_vertical_margin"
+                android:layout_below="@+journey/search_trip"/>
 
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText3"
-                android:layout_alignRight="@+id/editText2"
-                android:layout_alignBottom="@+id/textView4"
+                android:id="@+journey/begin_count"
+                android:inputType="number"
                 android:layout_alignTop="@+id/textView4"
                 android:layout_toRightOf="@+id/textView4"
-                android:inputType="number"/>
+                android:layout_marginLeft="25dp"
+                android:layout_toLeftOf="@+journey/search_trip"/>
 
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/start"
-                android:id="@+id/button5"
+                android:id="@+journey/start"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="29dp"/>
