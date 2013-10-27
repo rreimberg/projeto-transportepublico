@@ -121,7 +121,7 @@
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton"
+                android:id="@+stocking/historical"
                 android:background="@drawable/historico"
                 android:contentDescription="@string/historical"
                 android:layout_alignParentBottom="true"

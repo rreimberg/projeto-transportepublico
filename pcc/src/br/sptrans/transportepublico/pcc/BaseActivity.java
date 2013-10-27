@@ -1,10 +1,12 @@
 package br.sptrans.transportepublico.pcc;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Button;
@@ -73,6 +75,7 @@ public class BaseActivity extends Activity{
 
             @Override
             public void onClick(View v) {
+                pressImageButton(R.navigation_menu.journey);
                 abrirAtividade(JourneyActivity.class);
             }
         });
@@ -81,6 +84,7 @@ public class BaseActivity extends Activity{
 
             @Override
             public void onClick(View v) {
+                pressImageButton(R.navigation_menu.traffic);
                 abrirAtividade(TrafficActivity.class);
             }
         });
@@ -89,6 +93,7 @@ public class BaseActivity extends Activity{
 
             @Override
             public void onClick(View v) {
+                pressImageButton(R.navigation_menu.stocking);
                 abrirAtividade(StockingActivity.class);
             }
         });
@@ -97,8 +102,32 @@ public class BaseActivity extends Activity{
 
             @Override
             public void onClick(View v) {
+                pressImageButton(R.navigation_menu.alert);
                 abrirAtividade(AlertActivity.class);
             }
         });
+    }
+
+    public void pressImageButton(int id) {
+        Hashtable<Integer, Integer> map = new Hashtable<Integer, Integer>();
+
+        // menu
+        map.put(R.navigation_menu.journey, R.drawable.viagem_selecionado);
+        map.put(R.navigation_menu.traffic, R.drawable.transito_selecionado);
+        map.put(R.navigation_menu.stocking, R.drawable.lotacao_selecionado);
+        map.put(R.navigation_menu.alert, R.drawable.alertas_selecionado);
+
+        // buttons
+        map.put(R.journey.start, R.drawable.iniciar_viagem_selecionado);
+        map.put(R.traffic.easy, R.drawable.rapido_selecionado);
+        map.put(R.traffic.medium, R.drawable.moderado_selecionado);
+        map.put(R.traffic.hard, R.drawable.lento_selecionado);
+        map.put(R.traffic.historical, R.drawable.historico_selecionado);
+        map.put(R.stocking.historical, R.drawable.historico_selecionado);
+
+        ImageButton action = (ImageButton) findViewById(id);
+        Drawable background = action.getBackground();
+
+        action.setBackgroundResource(map.get(id));
     }
 }

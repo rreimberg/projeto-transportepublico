@@ -33,7 +33,7 @@
             <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:id="@+id/imageButton"
+                    android:id="@+traffic/easy"
                     android:background="@drawable/rapido"
                     android:contentDescription="@string/traffic_easy"
                     android:layout_margin="@dimen/buttons_margins"/>
@@ -41,7 +41,7 @@
             <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageButton2"
+                    android:id="@+traffic/medium"
                     android:background="@drawable/moderado"
                     android:contentDescription="@string/traffic_medium"
                     android:layout_margin="@dimen/buttons_margins"/>
@@ -49,7 +49,7 @@
             <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageButton3"
+                    android:id="@+traffic/hard"
                     android:background="@drawable/lento"
                     android:contentDescription="@string/traffic_hard"
                     android:layout_margin="@dimen/buttons_margins"/>
@@ -79,7 +79,7 @@
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton4"
+                android:id="@+traffic/historical"
                 android:background="@drawable/historico"
                 android:contentDescription="@string/historical"
                 android:layout_alignParentBottom="true"
