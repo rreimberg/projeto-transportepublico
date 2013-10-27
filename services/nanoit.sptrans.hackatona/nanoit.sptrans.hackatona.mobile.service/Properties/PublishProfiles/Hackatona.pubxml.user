@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKpZ2oVtI+kW4XfKYOFDYqQAAAAACAAAAAAAQZgAAAAEAACAAAAAlP343pf5mWfbnEcO0aKgS3Xd2JtK+Cs6xYsN9Sw4ytwAAAAAOgAAAAAIAACAAAADlh4ijNz9RC21uNAdDLopzPYzKIiuPxklwzQsKshHbVhAAAAB2Kg44zBdputL278eo63xGQAAAAOgTUYLSnzhT8RmevVV5obYHXdoNIDJ6bnQS3Eym/vIS3kK4O10FTRUFYsYnu71Ztj3V7Tk8JBxVDZ+3jL2Hqxc=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Elmah.dll">
+      <publishTime>04/01/2013 19:51:08</publishTime>
+    </File>
+    <File Include="bin/FluentNHibernate.dll">
+      <publishTime>04/01/2013 19:51:12</publishTime>
+    </File>
+    <File Include="bin/Iesi.Collections.dll">
+      <publishTime>04/01/2013 19:51:06</publishTime>
+    </File>
+    <File Include="bin/nanoit.sptrans.hackatona.mobile.core.dll">
+      <publishTime>10/27/2013 03:09:52</publishTime>
+    </File>
+    <File Include="bin/nanoit.sptrans.hackatona.mobile.service.dll">
+      <publishTime>10/27/2013 03:09:52</publishTime>
+    </File>
+    <File Include="bin/NHibernate.dll">
+      <publishTime>04/01/2013 19:51:34</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>04/01/2013 19:51:08</publishTime>
+    </File>
+    <File Include="BusService.svc">
+      <publishTime>10/26/2013 18:27:24</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/27/2013 03:09:53</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

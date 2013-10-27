@@ -1,0 +1,4 @@
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.core\bin\Debug\nanoit.sptrans.hackatona.admpanel.core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.core\bin\Debug\nanoit.sptrans.hackatona.admpanel.core.pdb
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.core\obj\Debug\nanoit.sptrans.hackatona.admpanel.core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.core\obj\Debug\nanoit.sptrans.hackatona.admpanel.core.pdb

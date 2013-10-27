@@ -1,0 +1,7 @@
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.service\obj\Debug\nanoit.sptrans.hackatona.admpanel.service.csprojResolveAssemblyReference.cache
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.service\bin\nanoit.sptrans.hackatona.admpanel.service.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.service\bin\nanoit.sptrans.hackatona.admpanel.service.pdb
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.service\bin\nanoit.sptrans.hackatona.admpanel.core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.service\bin\nanoit.sptrans.hackatona.admpanel.core.pdb
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.service\obj\Debug\nanoit.sptrans.hackatona.admpanel.service.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.admpanel.service\obj\Debug\nanoit.sptrans.hackatona.admpanel.service.pdb

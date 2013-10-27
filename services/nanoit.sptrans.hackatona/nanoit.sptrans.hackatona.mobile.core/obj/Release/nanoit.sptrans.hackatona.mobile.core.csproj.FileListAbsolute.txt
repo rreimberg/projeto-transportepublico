@@ -1,0 +1,13 @@
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\nanoit.sptrans.hackatona.mobile.core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\nanoit.sptrans.hackatona.mobile.core.pdb
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\Castle.Core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\Elmah.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\FluentNHibernate.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\Iesi.Collections.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\NHibernate.ByteCode.Castle.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\NHibernate.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\NHibernate.Linq.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Release\Ninject.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\obj\Release\nanoit.sptrans.hackatona.mobile.core.csprojResolveAssemblyReference.cache
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\obj\Release\nanoit.sptrans.hackatona.mobile.core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\obj\Release\nanoit.sptrans.hackatona.mobile.core.pdb

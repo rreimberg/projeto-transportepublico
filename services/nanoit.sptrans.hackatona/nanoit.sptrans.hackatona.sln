@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nanoit.sptrans.hackatona.mobile.service", "nanoit.sptrans.hackatona.mobile.service\nanoit.sptrans.hackatona.mobile.service.csproj", "{5D6AB90B-E83C-41EA-9FB0-A06B83A21DD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nanoit.sptrans.hackatona.admpanel.service", "nanoit.sptrans.hackatona.admpanel.service\nanoit.sptrans.hackatona.admpanel.service.csproj", "{7784EB50-E7A2-410E-93C1-3E754594F82D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Administrative Panel", "01. Administrative Panel", "{F00974FB-5F37-4A2E-9F2F-A5FCDE41242A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Mobile", "02. Mobile", "{B6251626-69D2-4FD5-AE2E-544EA802140C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nanoit.sptrans.hackatona.admpanel.core", "nanoit.sptrans.hackatona.admpanel.core\nanoit.sptrans.hackatona.admpanel.core.csproj", "{BB797DFA-6C69-4301-8A44-2A8D440A3C06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nanoit.sptrans.hackatona.mobile.core", "nanoit.sptrans.hackatona.mobile.core\nanoit.sptrans.hackatona.mobile.core.csproj", "{9522CF69-C68A-49F0-9FAD-3C21F753EF48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D6AB90B-E83C-41EA-9FB0-A06B83A21DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6AB90B-E83C-41EA-9FB0-A06B83A21DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6AB90B-E83C-41EA-9FB0-A06B83A21DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6AB90B-E83C-41EA-9FB0-A06B83A21DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7784EB50-E7A2-410E-93C1-3E754594F82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7784EB50-E7A2-410E-93C1-3E754594F82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7784EB50-E7A2-410E-93C1-3E754594F82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7784EB50-E7A2-410E-93C1-3E754594F82D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB797DFA-6C69-4301-8A44-2A8D440A3C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB797DFA-6C69-4301-8A44-2A8D440A3C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB797DFA-6C69-4301-8A44-2A8D440A3C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB797DFA-6C69-4301-8A44-2A8D440A3C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9522CF69-C68A-49F0-9FAD-3C21F753EF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9522CF69-C68A-49F0-9FAD-3C21F753EF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9522CF69-C68A-49F0-9FAD-3C21F753EF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9522CF69-C68A-49F0-9FAD-3C21F753EF48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D6AB90B-E83C-41EA-9FB0-A06B83A21DD9} = {B6251626-69D2-4FD5-AE2E-544EA802140C}
+		{9522CF69-C68A-49F0-9FAD-3C21F753EF48} = {B6251626-69D2-4FD5-AE2E-544EA802140C}
+		{7784EB50-E7A2-410E-93C1-3E754594F82D} = {F00974FB-5F37-4A2E-9F2F-A5FCDE41242A}
+		{BB797DFA-6C69-4301-8A44-2A8D440A3C06} = {F00974FB-5F37-4A2E-9F2F-A5FCDE41242A}
+	EndGlobalSection
+EndGlobal
