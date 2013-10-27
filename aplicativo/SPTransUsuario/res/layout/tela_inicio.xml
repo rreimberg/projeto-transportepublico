@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -6,27 +6,98 @@
     tools:context=".InicialActivity"
     tools:ignore="MergeRootFrame" >
 
-    <Button
-        android:id="@+tela_inicio/pesquisa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pesquisa" />
+    <TableRow
+        android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_weight="1" >
 
-    <Button
-        android:id="@+tela_inicio/favorito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="Favorito" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+tela_inicio/pontos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="Pontos" />
+            <ImageButton
+                android:id="@+tela_inicio/pesquisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_pesquisa" />
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Pesquisa" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+tela_inicio/favoritos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_favorito" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Favoritos" />
+        </LinearLayout>
+    </TableRow>
+    
+     <TableRow
+       android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_weight="1"  >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+tela_inicio/ponto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_ponto" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Pontos" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+		<ImageButton
+                android:id="@+tela_inicio/noticias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_ponto" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Noticias" />
+           
+        </LinearLayout>
+    </TableRow>
+
+
+</TableLayout>
 

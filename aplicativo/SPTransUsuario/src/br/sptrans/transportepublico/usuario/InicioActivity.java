@@ -1,10 +1,13 @@
 package br.sptrans.transportepublico.usuario;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import br.sptrans.transportepublico.banco.BancoDados;
 import br.sptrans.transportepublico.banco.BancoDadosScript;
+import br.sptrans.transportepublico.controle.SpinnerPopupControle;
+import br.sptrans.transportepublico.identificador.TransitoIdentificador;
 
 public class InicioActivity extends BaseActivity{
 
@@ -16,7 +19,7 @@ public class InicioActivity extends BaseActivity{
 		//Cria banco de dados		
 		new BancoDados(getApplicationContext(), BancoDadosScript.CreateTables(), "");
 				
-		controleButton(R.tela_inicio.favorito).setOnClickListener(new OnClickListener() {
+		controleImageButton(R.tela_inicio.favoritos).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -24,7 +27,7 @@ public class InicioActivity extends BaseActivity{
 			}
 		});
 		
-		controleButton(R.tela_inicio.pesquisa).setOnClickListener(new OnClickListener() {
+		controleImageButton(R.tela_inicio.pesquisa).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -32,12 +35,22 @@ public class InicioActivity extends BaseActivity{
 			}
 		});
 		
-		controleButton(R.tela_inicio.pontos).setOnClickListener(new OnClickListener() {
+		controleImageButton(R.tela_inicio.ponto).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				abrirAtividade(PontosActivity.class);
 			}
 		});	
+		
+		controleImageButton(R.tela_inicio.noticias).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				abrirAtividade(NoticiasActivity.class);
+			}
+		});
 	}
+	
+	
 }

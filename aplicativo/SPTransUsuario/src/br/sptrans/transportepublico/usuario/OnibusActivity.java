@@ -3,24 +3,38 @@ package br.sptrans.transportepublico.usuario;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import br.nanoitbrasil.mapa.IMapaServico;
 import br.nanoitbrasil.mapa.MapaServico;
 import br.nanoitbrasil.mapa.Marcador;
+import br.sptrans.transportepublico.controle.SpinnerPopupControle;
 import br.sptrans.transportepublico.identificador.EmpresaIdentificador;
+import br.sptrans.transportepublico.identificador.OnibusAvaliacaoIdentificador;
+import br.sptrans.transportepublico.identificador.OnibusLotacaoIdentificador;
+import br.sptrans.transportepublico.identificador.OnibusTipoIdentificador;
 import br.sptrans.transportepublico.identificador.SentidoIdentificador;
+import br.sptrans.transportepublico.identificador.TransitoIdentificador;
+import br.sptrans.transportepublico.modelo.CoordenadasModelo;
 import br.sptrans.transportepublico.modelo.LinhaModelo;
 import br.sptrans.transportepublico.modelo.OnibusModelo;
+import br.sptrans.transportepublico.servico.ComumServico;
 import br.sptrans.transportepublico.servico.OnibusServico;
 import br.sptrans.transportepublico.servico.RotaServico;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -45,6 +59,7 @@ public class OnibusActivity extends BaseFragmentActivity {
 		_mapaServico = new MapaServico(map,this);
 		_mapaServico.habilitaMinhaLocalizacao();
 
+		mostraOpcoes(false);
 		recebeLinha();
 		carregaOnibus();
 		
@@ -52,7 +67,16 @@ public class OnibusActivity extends BaseFragmentActivity {
 			
 			@Override
 			public void onClick(View v) {
+				
 				carregaOnibus();
+			}
+		});
+		
+		map.setOnMapClickListener(new OnMapClickListener() {
+			
+			@Override
+			public void onMapClick(LatLng arg0) {
+				mostraOpcoes(false);
 			}
 		});
 		
@@ -63,6 +87,7 @@ public class OnibusActivity extends BaseFragmentActivity {
 				CODIGO_LINHA_SELECIONADO = marker.getTitle();
 				TIPO_ONIBUS_SELECIONADO = Integer.parseInt(marker.getSnippet().split(",")[0]);
 				PREFIXO_SELECIONADO = marker.getSnippet().split(",")[1];
+				mostraOpcoes(true);
 				return false;
 			}
 		});
@@ -77,13 +102,14 @@ public class OnibusActivity extends BaseFragmentActivity {
 			@Override
 			public View getInfoContents(Marker marker) {
 				String textoDistancia = "Prefixo: %s\nN. Linha: %s \nDestino: %s\nDistância: %s Km";
-				ModeloLinha linha = pegaLinha(CODIGO_LINHA_SELECIONADO);
+				LinhaModelo linha = ComumServico.pegaLinha(CODIGO_LINHA_SELECIONADO,_linhaModelos);
 				
 				if(linha != null)
 				{
 					try
 					{
-						String distancia = Common.retornaDistancia(new Coordenadas(marker.getPosition().latitude, marker.getPosition().longitude), new Coordenadas(latLngUsuario.latitude, latLngUsuario.longitude));
+						new ComumServico();
+						String distancia = ComumServico.retornaDistancia(new CoordenadasModelo(marker.getPosition().latitude, marker.getPosition().longitude), new CoordenadasModelo(latLngUsuario.latitude, latLngUsuario.longitude));
 						textoDistancia = String.format(textoDistancia,PREFIXO_SELECIONADO,linha.GetLetreiroTipo(),linha.GetDestino(),distancia);
 					}
 					catch (Exception e) 
@@ -96,7 +122,7 @@ public class OnibusActivity extends BaseFragmentActivity {
 				linearLayout.setOrientation(LinearLayout.VERTICAL);
 				
 				ImageView imageView = new ImageView(getBaseContext());
-				imageView.setImageDrawable(getResources().getDrawable(Common.getImagemTipoOnibus(TIPO_ONIBUS_SELECIONADO)));
+				imageView.setImageDrawable(getResources().getDrawable(OnibusTipoIdentificador.getImagemOnibusTipoIdentificador(TIPO_ONIBUS_SELECIONADO)));
 				linearLayout.addView(imageView);
 				
 				TextView textView = new TextView(getBaseContext());
@@ -105,18 +131,86 @@ public class OnibusActivity extends BaseFragmentActivity {
 				return linearLayout;
 			}
 		});
+	
+		
+		controleImageButton(R.tela_onibus.transito).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				SpinnerPopupControle<TransitoIdentificador>  builder = new SpinnerPopupControle<TransitoIdentificador> (OnibusActivity.this,"Informe as condições de trânsito:",TransitoIdentificador.getTudo());
+				builder.setIcon(R.drawable.ic_launcher);
+				builder.setTitle("Trânsito");
+				builder.setPositiveButton("Enviar",new android.content.DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						mensagem("Obrigado por sua participação.");
+					}
+				});
+						
+				
+				builder.show();
+			}
+		});
+		
+		controleImageButton(R.tela_onibus.lotacao).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				SpinnerPopupControle<OnibusLotacaoIdentificador>  builder = new SpinnerPopupControle<OnibusLotacaoIdentificador> (OnibusActivity.this,"Informe sobre as condições de lotação do ônibus:",OnibusLotacaoIdentificador.getTudo());
+				builder.setIcon(R.drawable.ic_launcher);
+				builder.setTitle("Lotação");
+				builder.setPositiveButton("Enviar",new android.content.DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						mensagem("Obrigado por sua participação.");
+					}
+				});
+						
+				
+				builder.show();
+			}
+		});
+		
+			controleImageButton(R.tela_onibus.avaliacao).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				SpinnerPopupControle<OnibusAvaliacaoIdentificador>  builder = new SpinnerPopupControle<OnibusAvaliacaoIdentificador> (OnibusActivity.this,"Avalei o ônibus selecionado.",OnibusAvaliacaoIdentificador.getTudo());
+				builder.setIcon(R.drawable.ic_launcher);
+				builder.setTitle("Avaliação");
+				builder.setPositiveButton("Enviar",new android.content.DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						mensagem("Obrigado por sua participação.");
+					}
+				});
+						
+				
+				builder.show();
+			}
+		});
 	}
 	
 	public void carregaOnibus()
 	{
 		AsyncTask<Void, Void, Void> asyncTask = new AsyncTask<Void, Void, Void>()
 				{
+			
+			@Override
+					protected void onPreExecute() {
+						super.onPreExecute();
+						mensagem(getText(R.string.geral_atualizando).toString());
+					}
+			
 			@Override
 			protected Void doInBackground(Void... params) {
 				
 				for (LinhaModelo linha : _linhaModelos) {
 					OnibusServico onibusServico = new OnibusServico(OnibusActivity.this);
-					linha.SetOnibus(onibusServico.pesquisaOnibus(linha.getCodigoLinha(), EmpresaIdentificador.SPTrans, SentidoIdentificador.Bairro));
+					linha.SetOnibus(onibusServico.pesquisaOnibus(linha.getCodigoLinha(),EmpresaIdentificador.getPorValor(linha.getEmpresa()) , SentidoIdentificador.getPorValor(linha.getSentido())));
 				}
 				
 					runOnUiThread(new Runnable() {
@@ -124,14 +218,17 @@ public class OnibusActivity extends BaseFragmentActivity {
 						@Override
 						public void run() {
 							_mapaServico.limpaMapa();
+							mostraOpcoes(false);
+							mensagem(getText(R.string.geral_atualizando).toString());
 							for (LinhaModelo linha : _linhaModelos) {
-								for (OnibusModelo onibus : linha.getOnibus()) {
-									Marcador marcador = new Marcador(linha.getCodigoLinha(),
-											String.valueOf(onibus.getType()) + "," + onibus.getPrefixo(),
-											onibus.getIcone(),
-											onibus.getLatitudeDouble(),
-											onibus.getLongitudeDouble());
-									_mapaServico.carregaMarcador(marcador);	
+								if(linha.getOnibus() != null)
+									for (OnibusModelo onibus : linha.getOnibus()) {
+										Marcador marcador = new Marcador(linha.getCodigoLinha(),
+												String.valueOf(onibus.getType()) + "," + onibus.getPrefixo(),
+												onibus.getIcone(),
+												onibus.getLatitudeDouble(),
+												onibus.getLongitudeDouble());
+										_mapaServico.carregaMarcador(marcador);	
 								}
 							}
 						}
@@ -141,7 +238,7 @@ public class OnibusActivity extends BaseFragmentActivity {
 			
 			@Override
 					protected void onPostExecute(Void result) {
-				//mensagem(getText(/R.string)
+						mensagem(getText(R.string.geral_atualizado_sucesso).toString());
 						carregaRota();
 					}
 		};
@@ -178,8 +275,14 @@ public class OnibusActivity extends BaseFragmentActivity {
 
 	private void recebeLinha()
 	{
+		stopService(new Intent("NotificacaoDistancia"));
 		Intent intent = getIntent();
         Bundle b = intent.getExtras();
+        
+        if(b.getBoolean("servico"))
+        {
+        	Log.e("CoO", b.getString("linhaId"));
+        }
         
         String[] linhaIds = b.getString("linhaId").split(",");
     	String[] prefixos = b.getString("prefixos").split(",");
@@ -200,7 +303,6 @@ public class OnibusActivity extends BaseFragmentActivity {
 			linha.setDenominacaoTPTS(denominacaoTPTS[i]);
 			linha.setDenominacaoTSTP(denominacaoTSTP[i]);
 			_linhaModelos.add(linha);
-			//new Preferencia(BusActivity.this).delete(linha.CodigoLinha);
 		}
 	}
 	
@@ -217,14 +319,14 @@ public class OnibusActivity extends BaseFragmentActivity {
 		
 		return null;
 	}
-	
-	private LinhaModelo pegaLinha(String codigoLinha)
+
+	private void mostraOpcoes(boolean visivel)
 	{
-		if(_linhaModelos != null)
-			for (LinhaModelo linha : _linhaModelos) {		
-				if(codigoLinha.equals(linha.getCodigoLinha()))
-					return linha;
-		}
-		return null;
+		int visivelView = visivel ? View.VISIBLE : View.GONE;
+		controleImageButton(R.tela_onibus.avaliacao).setVisibility(visivelView);
+		controleImageButton(R.tela_onibus.lotacao).setVisibility(visivelView);
+		controleImageButton(R.tela_onibus.transito).setVisibility(visivelView);
+		controleImageButton(R.tela_onibus.avaliacao).setVisibility(visivelView);
+		controleImageButton(R.tela_onibus.avaliacao).setVisibility(visivelView);
 	}
 }

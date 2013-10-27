@@ -20,8 +20,6 @@ public class PesquisaServico {
 	{	
 		String url = _activity.getText((R.string.webservice_pesquisaLinha)).toString();
 		url = url.replace("@Linha", filtro);
-		url = url.replace("@ApplicationId", "1");
-		url = url.replace("@DeviceId", "1");
 		
 		String json = new WebService(_activity, url).webGet();
 		return new PesquisaMapeamento().deJsonParaModelo(json);

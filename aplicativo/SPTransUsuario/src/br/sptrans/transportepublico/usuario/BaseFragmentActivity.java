@@ -1,5 +1,6 @@
 package br.sptrans.transportepublico.usuario;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
@@ -56,7 +57,18 @@ public class BaseFragmentActivity extends FragmentActivity implements LocationLi
 		return (CheckBox)findViewById(id);
 	}
 	
-	public void abrirAtividadeMapa(List<LinhaModelo> linhaModelos)
+	public void abrirAtividadeMapa(List<LinhaModelo> linhaModelos,Intent i)
+	{
+		startActivity(abrirAtividadeMapaIntent(linhaModelos,i));
+	}
+	
+	public Intent abrirAtividadeMapaIntent(LinhaModelo linhaModelo,Intent i)
+	{
+		List<LinhaModelo> linhaModelos = new ArrayList<LinhaModelo>();
+		linhaModelos.add(linhaModelo);
+		return abrirAtividadeMapaIntent(linhaModelos,i);
+	}
+	public Intent abrirAtividadeMapaIntent(List<LinhaModelo> linhaModelos,Intent i)
 	{
 		String linhaIds = "";
 		String prefixos = "";
@@ -77,7 +89,6 @@ public class BaseFragmentActivity extends FragmentActivity implements LocationLi
 			tipos += linha.getTipo() + ",";
 		}
 		
-		Intent i = new Intent(getApplicationContext(),OnibusActivity.class);
 		//i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		i.putExtra("linhaId",linhaIds);
 		i.putExtra("prefixos",prefixos);
@@ -86,8 +97,9 @@ public class BaseFragmentActivity extends FragmentActivity implements LocationLi
 		i.putExtra("empresas", empresas);
 		i.putExtra("denominacaoTPTS", denominacaoTPTS);
 		i.putExtra("denominacaoTSTP", denominacaoTSTP);
-		startActivity(i);
+		return i;
 	}
+
 	
 	public static String retornaDistancia(CoordenadasModelo pontoA,CoordenadasModelo pontoB)
 	{

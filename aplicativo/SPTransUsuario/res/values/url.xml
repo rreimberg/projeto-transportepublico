@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="webservice_url_base">http://nanoitbrasil.com.br/CoO/ServiceV2/CoOService.svc/</string>
-    <string name="webservice_pesquisaLinha">PesquisarLinha/Linha/@Linha/ApplicationId/@ApplicationId/DeviceId/@DeviceId</string>
+    <string name="webservice_url_base">http://nanoitbrasil.com.br/Hackatona/BusService.svc/</string>
+    <string name="webservice_pesquisaLinha">PesquisarLinha/Linha/@Linha</string>
     <string name="webservice_pesquisaPosicao">PesquisarPosicaoOnibusLinha/OlhoVivoId/@OlhoVivoId/Empresa/@Empresa/Sentido/@Sentido</string>
     <string name="webservice_pesquisaRota">PesquisarLinhaRota/OlhoVivoId/@OlhoVivoId/Empresa/@Empresa</string>
     <string name="webservice_pesquisaOnibusPorPonto">PesquisaPrefixoPorPonto/stopId/@stopId</string>
     <string name="webservice_PesquisaPontosPorCoordenadas">PesquisaPontosPorCoordenadas/latitude/@Latitude/longitude/@Longitude/direction/@Direction/distanceMax/@distanceMax</string>
+    <string name="webservice_PesquisaOnibusProximo">GetBusStopDistance/OlhoVivoId/@OlhoVivoId/Empresa/@Empresa/Sentido/@Sentido/StopId/@StopId</string>
+    <string name="webservice_PesquisaNoticias">GetTweeter/Perfil/sptrans_</string>
 </resources>

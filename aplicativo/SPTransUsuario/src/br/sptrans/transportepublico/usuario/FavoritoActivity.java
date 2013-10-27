@@ -41,6 +41,7 @@ public class FavoritoActivity extends BaseActivity {
 	
 	private void carregaLista()
 	{
+		
 		FavoritoServico favoritoServico = new FavoritoServico(getApplicationContext());
 		FavoritoListView favoritoListView = new FavoritoListView(getApplicationContext(), favoritoServico.pesquisaFavorito(), R.layout.tela_favorito_listview);
 		controleListView(R.tela_favorito.lista).setAdapter(favoritoListView);

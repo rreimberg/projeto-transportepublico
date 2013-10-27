@@ -13,6 +13,7 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 import br.sptrans.transportepublico.usuario.R;
@@ -28,16 +29,28 @@ public class WebService{
     HttpGet httpGet = null;
     String webServiceUrl;
     String TAG_LOG = "WebService";
-    Activity context;
+    Activity activity;
+    Context context;
     
-    public WebService(Activity context,String serviceName){
-        HttpParams myParams = new BasicHttpParams();
+    public WebService(Activity activity,String serviceName){
+        this.activity = activity;
+        inicializacao();
+        webServiceUrl = activity.getResources().getText(R.string.webservice_url_base).toString() + serviceName; 
+    }
+    
+    public WebService(Context context,String serviceName){
+    	inicializacao();
         this.context = context;
-        HttpConnectionParams.setConnectionTimeout(myParams, 30000);
+        webServiceUrl = context.getResources().getText(R.string.webservice_url_base).toString() + serviceName; 
+    }
+    
+    private void inicializacao()
+    {
+    	HttpParams myParams = new BasicHttpParams();
+    	HttpConnectionParams.setConnectionTimeout(myParams, 30000);
         HttpConnectionParams.setSoTimeout(myParams, 30000);
         httpClient = new DefaultHttpClient(myParams);
         localContext = new BasicHttpContext();
-        webServiceUrl = context.getResources().getText(R.string.webservice_url_base).toString() + serviceName; 
     }
  
     //Use this method to do a HttpGet/WebGet on the web service
@@ -53,13 +66,16 @@ public class WebService{
         catch (ConnectTimeoutException e) 
         {
         	Log.e(TAG_LOG, e.getMessage());
-        	context.runOnUiThread(new Runnable() {
-				
-				@Override
-				public void run() {
-					Toast.makeText(context,R.string.webservice_conexao_lenta, Toast.LENGTH_LONG).show();
-				}
-			});        	
+        	if(activity != null)
+        	{
+        		activity.runOnUiThread(new Runnable() {
+					
+					@Override
+					public void run() {
+						Toast.makeText(activity,R.string.webservice_conexao_lenta, Toast.LENGTH_LONG).show();
+					}
+				});
+        	}
         }
         catch (Exception e) {
         	Log.e(TAG_LOG, e.getMessage());
