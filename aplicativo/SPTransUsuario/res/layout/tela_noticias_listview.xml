@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_height="wrap_content" 
+   android:gravity="left|center"
+   android:layout_width="wrap_content" >
+
+	<TextView
+	    android:id="@+tela_noticias_listview/data"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+tela_noticias_listview/texto"
+	    android:layout_marginLeft="16dp"
+	    android:paddingLeft="7px"
+	    android:text="01/05/2015 12:44" />
+
+	<TextView
+	    android:id="@+tela_noticias_listview/texto"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	      android:layout_marginLeft="16dp"
+	    android:text="dklsajdlksajdklsajdklsajdklsajdlkjdlksa"
+	    android:textStyle="bold" />
+  
+</RelativeLayout>

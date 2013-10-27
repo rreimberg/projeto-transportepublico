@@ -12,7 +12,8 @@ public class OnibusMapeamento {
 
 	public List<OnibusModelo> deJsonParaOnibusModelo(String json)
 	{
-		return new Gson().fromJson(json, pegaTipo());
+		List<OnibusModelo> onibusModelos = new Gson().fromJson(json, pegaTipo());
+		return onibusModelos;
 	}
 	
 	private Type pegaTipo()

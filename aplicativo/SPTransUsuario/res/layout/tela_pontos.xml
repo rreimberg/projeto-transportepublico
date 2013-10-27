@@ -10,4 +10,16 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         class="com.google.android.gms.maps.SupportMapFragment" />
+
+<ImageButton
+    android:id="@+tela_pontos/atualizar"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginRight="14dp"
+    android:layout_marginTop="57dp"
+    android:background="@android:color/transparent"
+    android:src="@drawable/atualizar" />
+
 </RelativeLayout>

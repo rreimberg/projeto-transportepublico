@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnMultiChoiceClickListener;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -38,6 +39,7 @@ public class PontosActivity extends BaseFragmentActivity{
 
 	private IMapaServico _mapaServico;
 	private CoordenadasModelo coordenadasTela;
+	private boolean onibusMaisProximo = false;
 	
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -53,8 +55,30 @@ public class PontosActivity extends BaseFragmentActivity{
 		map.setOnMarkerClickListener(new OnMarkerClickListener() {
 			
 			@Override
-			public boolean onMarkerClick(Marker marker) {
-				carregaLinhasDoPonto(marker.getTitle(), Integer.parseInt(marker.getSnippet()));
+			public boolean onMarkerClick(final Marker marker) {
+				
+				AlertDialog.Builder dialog = new AlertDialog.Builder(PontosActivity.this);
+				dialog.setTitle("O Que deseja fazer?");
+				dialog.setPositiveButton("Alertar ônibus mais próximo", new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						onibusMaisProximo = true;
+						carregaLinhasDoPonto(marker.getTitle(), Integer.parseInt(marker.getSnippet()));
+					}
+				});
+				
+				dialog.setNegativeButton("Abrir linhas do ponto",new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						onibusMaisProximo = false;
+						carregaLinhasDoPonto(marker.getTitle(), Integer.parseInt(marker.getSnippet()));
+					}
+				});
+				
+				dialog.show();
+				
 				return false;
 			}
 		});
@@ -89,6 +113,14 @@ public class PontosActivity extends BaseFragmentActivity{
 				textView.setText(textoDistancia);
 				linearLayout.addView(textView);
 				return linearLayout;
+			}
+		});
+		
+		controleImageButton(R.tela_pontos.atualizar).setOnClickListener(new  android.view.View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				carregaPontos();
 			}
 		});
 		
@@ -193,7 +225,7 @@ public class PontosActivity extends BaseFragmentActivity{
 								checados[id] = isChecked;		
 							}
 						});
-						dialog.setPositiveButton("Abrir Linhas",new OnClickListener() {
+						dialog.setPositiveButton("Abrir",new OnClickListener() {
 							
 							@Override
 							public void onClick(DialogInterface dialog, int which) {
@@ -214,7 +246,20 @@ public class PontosActivity extends BaseFragmentActivity{
 								}
 								
 								if(linhaModelos.size() != 0)
-									abrirAtividadeMapa(linhaModelos);
+								{
+									if(onibusMaisProximo)
+									{
+										Intent intent = abrirAtividadeMapaIntent(linhaModelos,new Intent("NotificacaoDistancia"));
+										intent.putExtra("pontoId", codigoParada);
+										stopService(intent);
+										startService(intent);
+									}
+									else
+									{
+										Intent i = new Intent(PontosActivity.this,OnibusActivity.class);
+										abrirAtividadeMapa(linhaModelos,i);	
+									}
+								}
 								else
 									mensagem("Selecione uma ou mais linhas.");
 							}

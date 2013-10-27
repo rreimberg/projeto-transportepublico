@@ -75,6 +75,19 @@ public class BaseActivity extends Activity{
 	
 	public void abrirAtividadeMapa(List<LinhaModelo> linhaModelos)
 	{
+		Intent i = new Intent(getApplicationContext(),OnibusActivity.class);
+		startActivity(abrirAtividadeMapaIntent(linhaModelos,i));
+	}
+	
+	public Intent abrirAtividadeMapaIntent(LinhaModelo linhaModelo)
+	{
+		Intent i = new Intent(getApplicationContext(),OnibusActivity.class);
+		List<LinhaModelo> linhaModelos = new ArrayList<LinhaModelo>();
+		linhaModelos.add(linhaModelo);
+		return abrirAtividadeMapaIntent(linhaModelos,i);
+	}
+	public Intent abrirAtividadeMapaIntent(List<LinhaModelo> linhaModelos,Intent i)
+	{
 		String linhaIds = "";
 		String prefixos = "";
 		String tipos = "";
@@ -94,7 +107,6 @@ public class BaseActivity extends Activity{
 			tipos += linha.getTipo() + ",";
 		}
 		
-		Intent i = new Intent(getApplicationContext(),OnibusActivity.class);
 		//i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		i.putExtra("linhaId",linhaIds);
 		i.putExtra("prefixos",prefixos);
@@ -103,6 +115,6 @@ public class BaseActivity extends Activity{
 		i.putExtra("empresas", empresas);
 		i.putExtra("denominacaoTPTS", denominacaoTPTS);
 		i.putExtra("denominacaoTSTP", denominacaoTSTP);
-		startActivity(i);
+		return i;
 	}
 }
