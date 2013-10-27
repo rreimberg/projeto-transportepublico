@@ -36,27 +36,27 @@ Dentre as funcionalidades existentes, podemos listar:
     Funcionalidade responsável por exibir todas as linhas que atendam a um texto informado pelo usuário.
     O retorno da pesquisa listará todas as linhas de ônibus da SPTrans e EMTU.
     Após o usuário selecionar a linha desejada, as mesmas serão exibidas no mapa para acompanhamento em tempo real.
-       
+
 :: Trânsito
 
     Funcionalidade no qual mostra os dados de trânsito de determinadas regiões mapeadas pela SPTrans.
-    
+
 :: Lotação
 
     Funcionalidade no qual exibe no mapa marcações de regiões com trânsito, baseado em informações dadas pelo próprio usuário.
-    
+
 :: Notícias
 
     Funcionalidade no qual listará os últimos tweets da @SPTrans_.
-    
+
 :: Ponto a ponto
 
     Funcionalidade no qual o usuário selecionará um ponto de ônibus de origem e outro de destino, e o próprio aplicativo lista a melhor opção utilizando uma linha de ônibus direta.
-    
+
 :: Notificações
 
-    Funcionalidade que envia uma notificação para o celular do usuário quando uma determinada linha está a XX km de um ponto de ônibus informado pelo usuário. 
-    
+    Funcionalidade que envia uma notificação para o celular do usuário quando uma determinada linha está a XX km de um ponto de ônibus informado pelo usuário.
+
 ... entre outras informações e funcionalidades adicionais que auxiliam o dia-a-dia do usuário.
 
 ### API
@@ -69,4 +69,4 @@ O QRCode é um formato universal no qual um determinado conteúdo é traduzido p
 
 A proposta em questão visa criar um código QRCode para cada parada de ônibus, que quando acessado (por qualquer aplicativo de leitura de QRCode) redireciona o usuário para uma página web com informações da parada de ônibus, ônibus próximos, horários, rotas, itinerários, entre outros. Além disso, a página web permitirá com as informações sejam exibidas em outros idiomas.
 
-Por se tratar de uma página web, qualquer plataforma de dispositivo móvel visualizará as informações.
+Por se tratar de uma página web, qualquer plataforma de dispositivo móvel com acesso a internet visualizará as informações.
