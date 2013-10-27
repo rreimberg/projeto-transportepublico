@@ -15,7 +15,7 @@ import org.apache.http.util.EntityUtils;
 import android.app.Activity;
 import android.util.Log;
 import android.widget.Toast;
-import br.sptrans.transportepublico.usuario.R;
+import br.sptrans.transportepublico.pcc.R;
  
 public class WebService{
  
