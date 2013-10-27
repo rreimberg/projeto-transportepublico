@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9522CF69-C68A-49F0-9FAD-3C21F753EF48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nanoit.sptrans.hackatona.mobile.core</RootNamespace>
+    <AssemblyName>nanoit.sptrans.hackatona.mobile.core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\References\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\References\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\References\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\References\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\References\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\References\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Linq">
+      <HintPath>..\References\NHibernate.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\References\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationApplication.cs" />
+    <Compile Include="Application\ApplicationWarningApplication.cs" />
+    <Compile Include="Application\BusApplication.cs" />
+    <Compile Include="Application\BusTypeApplication.cs" />
+    <Compile Include="Application\BusTypeSuggestionApplication.cs" />
+    <Compile Include="Application\DeviceApplication.cs" />
+    <Compile Include="Application\ErrorApplication.cs" />
+    <Compile Include="Application\FeatureApplication.cs" />
+    <Compile Include="Application\ItineraryApplication.cs" />
+    <Compile Include="Application\LineApplication.cs" />
+    <Compile Include="Application\LineDetailApplication.cs" />
+    <Compile Include="Application\LineRouteApplication.cs" />
+    <Compile Include="Application\LogAccessApplication.cs" />
+    <Compile Include="Application\LogFeatureApplication.cs" />
+    <Compile Include="Application\LogSearchApplication.cs" />
+    <Compile Include="Application\PassageApplication.cs" />
+    <Compile Include="Application\PlataformApplication.cs" />
+    <Compile Include="Application\StopApplication.cs" />
+    <Compile Include="Application\SuggestionApplication.cs" />
+    <Compile Include="Application\TrafficApplication.cs" />
+    <Compile Include="Domain\Abstract\Ioc\IFactory.cs" />
+    <Compile Include="Domain\Abstract\Repository\Connection\IConnection.cs" />
+    <Compile Include="Domain\Abstract\Repository\Connection\IHibernateConnection.cs" />
+    <Compile Include="Domain\Abstract\Repository\Connection\IHibernateRepository.cs" />
+    <Compile Include="Domain\Abstract\Repository\Connection\IRepository.cs" />
+    <Compile Include="Domain\Abstract\Repository\Connection\IRepositoryCRUD.cs" />
+    <Compile Include="Domain\Abstract\Security\ICripty.cs" />
+    <Compile Include="Domain\Entity\Application.cs" />
+    <Compile Include="Domain\Entity\ApplicationWarning.cs" />
+    <Compile Include="Domain\Entity\Bus.cs" />
+    <Compile Include="Domain\Entity\BusLineDetail.cs" />
+    <Compile Include="Domain\Entity\BusPosition.cs" />
+    <Compile Include="Domain\Entity\BusPositionReturn.cs" />
+    <Compile Include="Domain\Entity\BusPositionSPTransReturn.cs" />
+    <Compile Include="Domain\Entity\BusStopDistance.cs" />
+    <Compile Include="Domain\Entity\BusType.cs" />
+    <Compile Include="Domain\Entity\BusTypeSuggestion.cs" />
+    <Compile Include="Domain\Entity\Coordenates.cs" />
+    <Compile Include="Domain\Entity\Device.cs" />
+    <Compile Include="Domain\Entity\Emtu.cs" />
+    <Compile Include="Domain\Entity\Error.cs" />
+    <Compile Include="Domain\Entity\Feature.cs" />
+    <Compile Include="Domain\Entity\Itinerary.cs" />
+    <Compile Include="Domain\Entity\Line.cs" />
+    <Compile Include="Domain\Entity\LineDetail.cs" />
+    <Compile Include="Domain\Entity\LineRoute.cs" />
+    <Compile Include="Domain\Entity\LogAccess.cs" />
+    <Compile Include="Domain\Entity\LogFeature.cs" />
+    <Compile Include="Domain\Entity\LogSearch.cs" />
+    <Compile Include="Domain\Entity\MessageReturn.cs" />
+    <Compile Include="Domain\Entity\Passage.cs" />
+    <Compile Include="Domain\Entity\Plataform.cs" />
+    <Compile Include="Domain\Entity\RouterReturn.cs" />
+    <Compile Include="Domain\Entity\RouterReturnType.cs" />
+    <Compile Include="Domain\Entity\Stop.cs" />
+    <Compile Include="Domain\Entity\StopLine.cs" />
+    <Compile Include="Domain\Entity\StopLineId.cs" />
+    <Compile Include="Domain\Entity\StopLineReturn.cs" />
+    <Compile Include="Domain\Entity\StopReturn.cs" />
+    <Compile Include="Domain\Entity\Suggestion.cs" />
+    <Compile Include="Domain\Entity\TweetsMessage.cs" />
+    <Compile Include="Domain\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Domain\Extensions\StringExtensions.cs" />
+    <Compile Include="Domain\Abstract\ILog.cs" />
+    <Compile Include="Domain\Service\Ioc\RepositoryModule.cs" />
+    <Compile Include="Domain\Service\Service\DistanceNotificationService.cs" />
+    <Compile Include="Domain\Service\Service\Log.cs" />
+    <Compile Include="Domain\Service\User\BaseService.cs" />
+    <Compile Include="Infra\Repository\Connection\HibernateConnection.cs" />
+    <Compile Include="Infra\Repository\Connection\HibernateRepository.cs" />
+    <Compile Include="Infra\Repository\Implements\DistanceNotificationRepository.cs" />
+    <Compile Include="Infra\Repository\Implements\ItineraryRepository.cs" />
+    <Compile Include="Infra\Repository\Implements\LineRepository.cs" />
+    <Compile Include="Infra\Repository\Implements\LineRouteRepository.cs" />
+    <Compile Include="Infra\Repository\Implements\StopLineRepository.cs" />
+    <Compile Include="Infra\Repository\Implements\StopRepository.cs" />
+    <Compile Include="Infra\Repository\Map\ApplicationMap.cs" />
+    <Compile Include="Infra\Repository\Map\ApplicationWarningMap.cs" />
+    <Compile Include="Infra\Repository\Map\BusMap.cs" />
+    <Compile Include="Infra\Repository\Map\BusTypeMap.cs" />
+    <Compile Include="Infra\Repository\Map\BusTypeSuggestionMap.cs" />
+    <Compile Include="Infra\Repository\Map\DeviceMap.cs" />
+    <Compile Include="Infra\Repository\Map\ErrorMap.cs" />
+    <Compile Include="Infra\Repository\Map\FeatureMap.cs" />
+    <Compile Include="Infra\Repository\Map\ItineraryMap.cs" />
+    <Compile Include="Infra\Repository\Map\LineDetailMap.cs" />
+    <Compile Include="Infra\Repository\Map\LineMap.cs" />
+    <Compile Include="Infra\Repository\Map\LineRouteMap.cs" />
+    <Compile Include="Infra\Repository\Map\LogAccessMap.cs" />
+    <Compile Include="Infra\Repository\Map\LogFeatureMap.cs" />
+    <Compile Include="Infra\Repository\Map\LogSearchMap.cs" />
+    <Compile Include="Infra\Repository\Map\PassageMap.cs" />
+    <Compile Include="Infra\Repository\Map\PlataformMap.cs" />
+    <Compile Include="Infra\Repository\Map\StopLineMap.cs" />
+    <Compile Include="Infra\Repository\Map\StopMap.cs" />
+    <Compile Include="Infra\Repository\Map\SuggestionMap.cs" />
+    <Compile Include="Infra\Repository\RepositoryConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\Service\Factory\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

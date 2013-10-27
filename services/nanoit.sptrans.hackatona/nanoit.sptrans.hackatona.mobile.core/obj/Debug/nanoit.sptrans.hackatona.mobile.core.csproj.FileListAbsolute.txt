@@ -1,0 +1,13 @@
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\obj\Debug\nanoit.sptrans.hackatona.mobile.core.csprojResolveAssemblyReference.cache
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\nanoit.sptrans.hackatona.mobile.core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\nanoit.sptrans.hackatona.mobile.core.pdb
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\Castle.Core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\Elmah.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\FluentNHibernate.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\Iesi.Collections.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\NHibernate.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\NHibernate.Linq.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\bin\Debug\Ninject.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\obj\Debug\nanoit.sptrans.hackatona.mobile.core.dll
+C:\Users\Bruno\documents\visual studio 2012\Projects\nanoit.sptrans.hackatona\nanoit.sptrans.hackatona.mobile.core\obj\Debug\nanoit.sptrans.hackatona.mobile.core.pdb
