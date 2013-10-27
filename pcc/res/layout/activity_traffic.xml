@@ -3,7 +3,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@drawable/tela"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin">
 
     <include
             android:layout_width="wrap_content"
@@ -19,28 +23,36 @@
         <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:id="@+id/linearLayout"
-                android:gravity="center">
+                >
 
-            <Button
-                    android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
-                    android:text="@string/traffic_easy"
-                    android:id="@+id/button"/>
-
-            <Button
-                    android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
-                    android:text="@string/traffic_medium"
-                    android:id="@+id/button2"/>
-
-            <Button
-                    android:layout_width="@dimen/button_width"
+            <ImageButton
+                    android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:text="@string/traffic_hard"
-                    android:id="@+id/button3"/>
+                    android:id="@+id/imageButton"
+                    android:background="@drawable/rapido"
+                    android:contentDescription="@string/traffic_easy"
+                    android:layout_margin="@dimen/buttons_margins"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton2"
+                    android:background="@drawable/moderado"
+                    android:contentDescription="@string/traffic_medium"
+                    android:layout_margin="@dimen/buttons_margins"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton3"
+                    android:background="@drawable/lento"
+                    android:contentDescription="@string/traffic_hard"
+                    android:layout_margin="@dimen/buttons_margins"/>
         </LinearLayout>
 
         <TextView
@@ -64,15 +76,17 @@
                 android:layout_toRightOf="@+id/textView"
                 android:layout_marginLeft="27dp"/>
 
-        <Button
-                android:layout_width="@dimen/button_width"
-                android:layout_height="@dimen/button_height"
-                android:text="@string/historical"
-                android:id="@+id/button4"
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton4"
+                android:background="@drawable/historico"
+                android:contentDescription="@string/historical"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="22dp"
+                android:layout_marginRight="25dp"
                 android:layout_marginBottom="22dp"/>
+
     </RelativeLayout>
 
 </LinearLayout>

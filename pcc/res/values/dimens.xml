@@ -6,6 +6,8 @@
     <!-- Elements margins -->
     <dimen name="lines_vertical_margin">16dp</dimen>
 
+    <dimen name="buttons_margins">10dp</dimen>
+
     <!-- Elements size -->
     <dimen name="notes_height">150dp</dimen>
     <dimen name="notes_width">900dp</dimen>

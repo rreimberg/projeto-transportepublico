@@ -9,88 +9,121 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".TripActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/tela">
 
 
     <include
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/navigation_menu"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/include"/>
 
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_gravity="center_horizontal|top">
+            android:id="@+journey/screen">
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/route_id"
-                android:id="@+id/textView"
-                android:layout_gravity="center|top"
-                android:layout_alignBottom="@+journey/route_id"
-                android:layout_alignParentLeft="true"/>
-
-        <EditText
-                android:layout_width="391dp"
-                android:layout_height="wrap_content"
-                android:id="@+journey/route_id"
-                android:inputType="text"
-                android:layout_marginLeft="23dp"
-                android:layout_alignBottom="@+journey/search_trip"
-                android:layout_toRightOf="@+id/textView4"/>
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/search"
-                android:id="@+journey/search_trip"
-                android:layout_gravity="center_horizontal|top"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+journey/route_id"/>
-
-        <TextView
+        <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Jardim Herplin -> Pça da Árvore"
-                android:id="@+journey/trip_headsign"
-                android:layout_toRightOf="@+journey/search_trip"
-                android:layout_marginLeft="22dp"
-                android:layout_alignTop="@+id/textView"
-                android:layout_alignParentRight="true"/>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Contador"
-                android:id="@+id/textView4"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal|top"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_below="@+id/include"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="@dimen/lines_vertical_margin"
-                android:layout_below="@+journey/search_trip"/>
-
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+journey/begin_count"
-                android:inputType="number"
-                android:layout_alignTop="@+id/textView4"
-                android:layout_toRightOf="@+id/textView4"
-                android:layout_marginLeft="25dp"
-                android:layout_toLeftOf="@+journey/search_trip"/>
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/start"
                 android:id="@+journey/start"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="29dp"/>
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="35dp">
 
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/route_id"
+                    android:id="@+id/textView"
+                    android:layout_gravity="center|top"
+                    android:layout_alignBottom="@+journey/route_id"
+                    android:layout_alignParentLeft="true"/>
+
+            <EditText
+                    android:layout_width="391dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+journey/route_id"
+                    android:inputType="text"
+                    android:layout_marginLeft="23dp"
+                    android:layout_alignBottom="@+journey/search_trip"
+                    android:layout_toRightOf="@+id/textView4"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search"
+                    android:id="@+journey/search_trip"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+journey/route_id"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Jardim Herplin -> Pça da Árvore"
+                    android:id="@+journey/trip_headsign"
+                    android:layout_toRightOf="@+journey/search_trip"
+                    android:layout_marginLeft="22dp"
+                    android:layout_alignTop="@+id/textView"
+                    android:layout_alignParentRight="true"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Contador"
+                    android:id="@+id/textView4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/lines_vertical_margin"
+                    android:layout_below="@+journey/search_trip"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+journey/begin_count"
+                    android:inputType="number"
+                    android:layout_alignTop="@+id/textView4"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toLeftOf="@+journey/search_trip"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+journey/start"
+                    android:background="@drawable/iniciar_viagem"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+journey/popup"
+            android:visibility="invisible">
+
+        <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+journey/trips"
+                android:visibility="invisible"
+                android:choiceMode="singleChoice"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_alignParentLeft="true"
+                android:focusable="true"
+                android:clickable="true"/>
     </RelativeLayout>
 
 </LinearLayout>

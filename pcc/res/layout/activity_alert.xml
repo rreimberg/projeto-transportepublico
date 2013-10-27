@@ -3,7 +3,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@drawable/tela"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin">
 
     <include
             android:layout_width="wrap_content"
@@ -14,7 +18,10 @@
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:paddingTop="35dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
 
         <LinearLayout
                 android:layout_width="fill_parent"

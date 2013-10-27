@@ -3,7 +3,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@drawable/tela"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin">
 
     <include
             android:layout_width="wrap_content"
@@ -23,37 +27,63 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:id="@+id/linearLayout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <Button
-                    android:layout_width="@dimen/button_width"
+            <SeekBar
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+stocking/level"
+                    android:max="4"
+                    android:progress="0"
+                    android:indeterminate="false"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="30dp"
+                    android:padding="20dp"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:text="Vazio (assento vago)"
-                    android:id="@+id/button"/>
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center">
 
-            <Button
-                    android:layout_width="@dimen/button_width"
-                    android:layout_height="fill_parent"
-                    android:text="Vazio (sem assento vago)"
-                    android:id="@+id/button2"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+stocking/level_1"
+                        android:background="@drawable/nivel1"
+                        android:visibility="invisible"/>
 
-            <Button
-                    android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
-                    android:text="normal"
-                    android:id="@+id/button3"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+stocking/level_2"
+                        android:background="@drawable/nivel2"
+                        android:visibility="invisible"/>
 
-            <Button
-                    android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
-                    android:text="Cheio"
-                    android:id="@+id/button4"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+stocking/level_3"
+                        android:background="@drawable/nivel3"
+                        android:visibility="invisible"/>
 
-            <Button
-                    android:layout_width="@dimen/button_width"
-                    android:layout_height="@dimen/button_height"
-                    android:text="Lotado"
-                    android:id="@+id/button5"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+stocking/level_4"
+                        android:background="@drawable/nivel4"
+                        android:visibility="invisible"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+stocking/level_5"
+                        android:background="@drawable/nivel5"
+                        android:visibility="invisible"/>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -61,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/status"
+                android:text="Última Atualização"
                 android:id="@+id/textView"
                 android:layout_below="@+id/linearLayout"
                 android:layout_alignParentLeft="true"
@@ -72,21 +102,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Cheio dd/mm/yyyy HH:MM"
+                android:text="dd/mm/yyyy HH:MM"
                 android:id="@+id/textView2"
                 android:layout_alignTop="@+id/textView"
                 android:layout_toRightOf="@+id/textView"
                 android:layout_marginLeft="27dp"/>
 
-        <Button
-                android:layout_width="@dimen/button_width"
-                android:layout_height="@dimen/button_height"
-                android:text="@string/historical"
-                android:id="@+id/button4"
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:background="@drawable/historico"
+                android:contentDescription="@string/historical"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="22dp"
-                android:layout_marginBottom="22dp"/>
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="21dp"/>
 
     </RelativeLayout>
 

@@ -4,30 +4,38 @@
               android:orientation="horizontal"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              >
+        >
 
     <ImageButton
             android:layout_width="194dp"
             android:layout_height="fill_parent"
             android:id="@+navigation_menu/journey"
-            android:background="@drawable/viagem"/>
+            android:background="@drawable/viagem"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+navigation_menu/traffic"
-            android:background="@drawable/transito"/>
+            android:background="@drawable/transito"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+navigation_menu/stocking"
-            android:background="@drawable/lotacao"/>
+            android:background="@drawable/lotacao"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+navigation_menu/alert"
-            android:background="@drawable/alertas"/>
+            android:background="@drawable/alertas"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
 </LinearLayout>

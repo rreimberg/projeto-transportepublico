@@ -18,4 +18,6 @@
     <string name="historical">Histórico</string>
     <string name="send">Enviar</string>
 
+    <string name="webservice_conexao_lenta">Pesquisa uma linha por nome ou número.</string>
+
 </resources>
