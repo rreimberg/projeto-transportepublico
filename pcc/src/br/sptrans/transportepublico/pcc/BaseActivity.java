@@ -1,4 +1,4 @@
-package br.sptrans.transportepublico.usuario;
+package br.sptrans.transportepublico.pcc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -65,44 +66,39 @@ public class BaseActivity extends Activity{
 				
 				asyncTask.execute();
 	}
-	
-	public void abrirAtividadeMapa(LinhaModelo linhaModelo)
-	{
-		List<LinhaModelo> linhaModelos = new ArrayList<LinhaModelo>();
-		linhaModelos.add(linhaModelo);
-		abrirAtividadeMapa(linhaModelos);
-	}
-	
-	public void abrirAtividadeMapa(List<LinhaModelo> linhaModelos)
-	{
-		String linhaIds = "";
-		String prefixos = "";
-		String tipos = "";
-		String sentidos = "";
-		String empresas = "";
-		String denominacaoTPTS = "";
-		String denominacaoTSTP = "";
-		
-		for (LinhaModelo linha : linhaModelos) 
-		{
-			linhaIds += linha.getCodigoLinha() + ",";
-			prefixos += linha.getLetreiro() + ",";
-			sentidos += linha.getSentido() + ",";
-			empresas += linha.getEmpresa() + ",";
-			denominacaoTPTS += linha.getDenominacaoTPTS() + ",";
-			denominacaoTSTP += linha.getDenominacaoTSTP() + ",";
-			tipos += linha.getTipo() + ",";
-		}
-		
-		Intent i = new Intent(getApplicationContext(),OnibusActivity.class);
-		//i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		i.putExtra("linhaId",linhaIds);
-		i.putExtra("prefixos",prefixos);
-		i.putExtra("tipos",tipos);
-		i.putExtra("sentidos",sentidos);
-		i.putExtra("empresas", empresas);
-		i.putExtra("denominacaoTPTS", denominacaoTPTS);
-		i.putExtra("denominacaoTSTP", denominacaoTSTP);
-		startActivity(i);
-	}
+
+    protected void defaultNavigation()
+    {
+        findViewById(R.navigation_menu.journey).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                abrirAtividade(JourneyActivity.class);
+            }
+        });
+
+        findViewById(R.navigation_menu.traffic).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                abrirAtividade(TrafficActivity.class);
+            }
+        });
+
+        findViewById(R.navigation_menu.stocking).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                abrirAtividade(StockingActivity.class);
+            }
+        });
+
+        findViewById(R.navigation_menu.alert).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                abrirAtividade(AlertActivity.class);
+            }
+        });
+    }
 }
