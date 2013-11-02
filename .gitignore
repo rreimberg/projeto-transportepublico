@@ -1,9 +1,9 @@
 *.swp
 *.iml
 *.log
-*/.idea
+*.idea
 *bin
 *gen
-*/out
+*out
 */.metadata
 build-log.xml
