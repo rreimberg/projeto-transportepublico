@@ -1,8 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-</LinearLayout>
+    <EditText
+        android:id="@+tela_viagem/edittext_codigo_linha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+tela_viagem/textview_codigo_linha"
+        android:layout_alignRight="@+tela_viagem/imagebutton_iniciar_viagem"
+        android:ems="10"
+        android:text="695H"
+         />
+
+    <ImageButton
+        android:id="@+tela_viagem/imagebutton_pesquisar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+tela_viagem/edittext_codigo_linha"
+        android:layout_alignTop="@+tela_viagem/edittext_codigo_linha"
+        android:layout_toRightOf="@+tela_viagem/edittext_codigo_linha"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+tela_viagem/edittext_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+tela_viagem/textview_contador"
+        android:layout_toLeftOf="@+tela_viagem/imagebutton_pesquisar"
+        android:inputType="number"
+        android:maxLength="6"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+tela_viagem/textview_origem_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+tela_viagem/textview_codigo_linha"
+        android:layout_below="@+tela_viagem/textview_codigo_linha"
+        android:layout_marginTop="19dp"
+        android:textSize="25dp"
+        android:text="Origem:" />
+
+    <TextView
+        android:id="@+tela_viagem/textview_origem_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+tela_viagem/textview_origem_descricao"
+        android:layout_alignBottom="@+tela_viagem/textview_origem_descricao"
+        android:layout_alignLeft="@+tela_viagem/edittext_codigo_linha"
+        android:textSize="25dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+tela_viagem/textview_destino_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+tela_viagem/textview_destino_descricao"
+        android:layout_alignBottom="@+tela_viagem/textview_destino_descricao"
+        android:layout_alignLeft="@+tela_viagem/edittext_contador"
+        android:textSize="25dp"
+        android:text="" />
+
+    <Button
+        android:id="@+tela_viagem/imagebutton_iniciar_viagem"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="71dp"
+        android:background="#008000"
+        android:textColor="#ffffff"
+        android:text="Iniciar\nViagem"/>
+
+    <TextView
+        android:id="@+tela_viagem/textview_destino_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+tela_viagem/textview_origem_descricao"
+        android:layout_below="@+tela_viagem/textview_origem_descricao"
+        android:layout_marginTop="22dp"
+        android:text="Destino:"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+tela_viagem/textview_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+tela_viagem/textview_destino_descricao"
+        android:layout_below="@+tela_viagem/textview_destino_descricao"
+        android:layout_marginTop="19dp"
+        android:inputType="number"
+        android:text="Contador catraca:"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+tela_viagem/textview_codigo_linha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="34dp"
+        android:text="Digite o código da linha:"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+tela_viagem/textview_inicio_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+tela_viagem/textview_inicio_descricao"
+        android:layout_alignBottom="@+tela_viagem/textview_inicio_descricao"
+        android:layout_alignLeft="@+tela_viagem/edittext_contador"
+        android:text="Aguardando início da viagem..."
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+tela_viagem/textview_inicio_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+tela_viagem/textview_contador"
+        android:layout_below="@+tela_viagem/textview_contador"
+        android:layout_marginTop="24dp"
+        android:text="Data/Hora de Ínicio:"
+        android:textSize="25dp" />
+</RelativeLayout>

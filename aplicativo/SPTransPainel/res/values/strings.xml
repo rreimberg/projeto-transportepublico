@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" >SPTransPainel
-    </string>
-    <string name="title_viagem_detail" >Viagem Detail
-    </string>
+    <string name="app_name" >Painel de Controle do Cobrador</string>
+    
+    <!-- Geral -->
+    <string name="geral_conexao_lenta" >Conexão lenta</string>
 
 </resources>
