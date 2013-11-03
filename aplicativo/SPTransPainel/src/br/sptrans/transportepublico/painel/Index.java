@@ -4,12 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Created by rreimberg on 10/31/13.
+ * Created by rreimberg on 11/3/13.
  */
-public class Lotacao extends Activity {
+public class Index extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.tela_lotacao);
+        setContentView(R.layout.base);
     }
 }

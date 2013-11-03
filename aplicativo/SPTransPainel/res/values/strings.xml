@@ -2,8 +2,15 @@
 <resources>
 
     <string name="app_name" >Painel de Controle do Cobrador</string>
-    
+
     <!-- Geral -->
     <string name="geral_conexao_lenta" >Conexão lenta</string>
+
+    <string name="title_viagem_detail" >Viagem Detail
+    </string>
+    <string name="viagem">Viagem</string>
+    <string name="transito">Trânsito</string>
+    <string name="lotacao">Lotação</string>
+    <string name="alertas">Alertas</string>
 
 </resources>
