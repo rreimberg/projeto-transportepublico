@@ -26,7 +26,12 @@ public class BaseFragmentActivity extends FragmentActivity implements LocationLi
 
 	public LocationManager locationManager;
 	public LatLng latLngUsuario = null;
-	
+
+	@Override
+	protected void onCreate(Bundle arg0) {
+		super.onCreate(arg0);
+		locationManager();
+	}
 	public void mensagem(String text)
 	{
 		Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
@@ -118,10 +123,7 @@ public class BaseFragmentActivity extends FragmentActivity implements LocationLi
 	@Override
 	public void onLocationChanged(Location location) {
 		if(location != null)
-		{
 			latLngUsuario = new LatLng(location.getLatitude(), location.getLongitude());
-			mensagem("Posição Atualizada");
-		}
 	}
 
 	@Override
@@ -142,7 +144,7 @@ public class BaseFragmentActivity extends FragmentActivity implements LocationLi
 		
 	}
 	
-	private void locationManager() {
+	protected void locationManager() {
 		try
 		{
 			locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -163,13 +165,14 @@ public class BaseFragmentActivity extends FragmentActivity implements LocationLi
 	@Override
 	protected void onResume() {
 		super.onResume();
-		locationManager();
 	}
 	
 	@Override
 	protected void onPause() {
 		super.onPause();
-		locationManager.removeUpdates(this);
-		mensagem("Removido GPS");
+		if(locationManager != null)
+			locationManager.removeUpdates(this);
 	}
+	
+	
 }

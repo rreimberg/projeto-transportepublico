@@ -78,13 +78,17 @@ public class PesquisaListView extends BaseAdapter{
 			@Override
 			public void onClick(View v) {
 				FavoritoModelo f = new FavoritoMapeamento().dePesquisaModeloParaFavoritoModelo(pesquisaModelo);
-				Toast.makeText(_context, f.GetDestino(), Toast.LENGTH_LONG).show();
 								
 				FavoritoRepositorio favoritoRepositorio = new FavoritoRepositorio(_context);
 				FavoritoModelo result = favoritoRepositorio.pesquisaPorId(pesquisaModelo.getCodigoLinha());
 				
 				if(result == null)
+				{
 					favoritoRepositorio.inserir(f);
+					Toast.makeText(_context, "Favorito adicionado.", Toast.LENGTH_LONG).show();
+				}
+				else
+					Toast.makeText(_context, "Favorito já existe.", Toast.LENGTH_LONG).show();
 			}
 		};
 	}

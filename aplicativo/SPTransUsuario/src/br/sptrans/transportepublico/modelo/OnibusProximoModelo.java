@@ -8,7 +8,8 @@ public class OnibusProximoModelo {
 	private String NameSource;
 	private String NameTarget;
 	private String Prefix;
-	private String PrefixType;
+	private int PrefixType;
+	private int BusType;
 	
 	public int getBusPrefix() {
 		return BusPrefix;
@@ -17,6 +18,10 @@ public class OnibusProximoModelo {
 		BusPrefix = busPrefix;
 	}
 	public String getDistance() {
+		
+		if(Distance != null && Distance.length() > 5)
+			return Distance.substring(0,5);
+
 		return Distance;
 	}
 	public void setDistance(String distance) {
@@ -46,10 +51,16 @@ public class OnibusProximoModelo {
 	public void setPrefix(String prefix) {
 		Prefix = prefix;
 	}
-	public String getPrefixType() {
+	public int getPrefixType() {
 		return PrefixType;
 	}
-	public void setPrefixType(String prefixType) {
+	public void setPrefixType(int prefixType) {
 		PrefixType = prefixType;
+	}
+	public int getBusType() {
+		return BusType;
+	}
+	public void setBusType(int busType) {
+		BusType = busType;
 	}
 }

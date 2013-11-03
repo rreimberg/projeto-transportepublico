@@ -12,6 +12,7 @@
 	    android:layout_below="@+tela_noticias_listview/texto"
 	    android:layout_marginLeft="16dp"
 	    android:paddingLeft="7px"
+	    android:textColor="#000000"
 	    android:text="01/05/2015 12:44" />
 
 	<TextView
@@ -21,7 +22,8 @@
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentTop="true"
 	      android:layout_marginLeft="16dp"
-	    android:text="dklsajdlksajdklsajdklsajdklsajdlkjdlksa"
+	      android:textColor="#000000"
+	      android:text="dklsajdlksajdklsajdklsajdklsajdlkjdlksa"
 	    android:textStyle="bold" />
   
 </RelativeLayout>

@@ -13,8 +13,8 @@
 
 <ImageButton
     android:id="@+tela_onibus/atualizar"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
     android:layout_alignParentRight="true"
     android:layout_alignParentTop="true"
     android:layout_marginTop="61dp"
@@ -23,30 +23,30 @@
     android:src="@drawable/atualizar" />
 
 <ImageButton
-    android:id="@+tela_onibus/transito"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:layout_alignLeft="@+tela_onibus/atualizar"
-    android:layout_below="@+tela_onibus/atualizar"
-    android:background="@android:color/transparent"
-    android:src="@drawable/monitorar" />
-
-<ImageButton
     android:id="@+tela_onibus/lotacao"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
+     android:layout_width="45dp"
+    android:layout_height="45dp"
     android:layout_alignLeft="@+tela_onibus/transito"
     android:layout_below="@+tela_onibus/transito"
     android:background="@android:color/transparent"
-    android:src="@drawable/monitorar" />
+    android:src="@drawable/onibus_lotacao" />
 
 <ImageButton
     android:id="@+tela_onibus/avaliacao"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
+     android:layout_width="45dp"
+    android:layout_height="45dp"
     android:layout_alignLeft="@+tela_onibus/lotacao"
     android:layout_below="@+tela_onibus/lotacao"
     android:background="@android:color/transparent"
-    android:src="@drawable/atualizar" />
+    android:src="@drawable/onibus_avaliacao" />
+
+<ImageButton
+    android:id="@+tela_onibus/transito"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:layout_alignRight="@+tela_onibus/atualizar"
+    android:layout_below="@+tela_onibus/atualizar"
+    android:background="@android:color/transparent"
+    android:src="@drawable/onibus_transito" />
 
 </RelativeLayout>

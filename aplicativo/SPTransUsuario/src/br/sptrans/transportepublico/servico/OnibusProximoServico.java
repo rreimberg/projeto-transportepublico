@@ -2,6 +2,7 @@ package br.sptrans.transportepublico.servico;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import br.sptrans.transportepublico.identificador.EmpresaIdentificador;
 import br.sptrans.transportepublico.identificador.SentidoIdentificador;
 import br.sptrans.transportepublico.mapeamento.OnibusProximoMapeamento;
@@ -25,6 +26,10 @@ public class OnibusProximoServico {
 	
 	public OnibusProximoModelo pesquisaOnibusProximo(String ids,int pontoId)
 	{
+		if(ids == null || ids.length() == 0)
+			return null;
+		
+		ids = ids.substring(0,ids.length() - 1);
 		String url = "";
 		
 		if(_activity != null)
@@ -44,6 +49,8 @@ public class OnibusProximoServico {
 		else
 			json = new WebService(_context, url).webGet();
 		
+		Log.e("Cooo", url);
+		Log.e("Cooo", json);
 		return new OnibusProximoMapeamento().deJson(json);
 	}
 }

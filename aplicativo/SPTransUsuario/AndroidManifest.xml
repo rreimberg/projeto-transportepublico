@@ -35,7 +35,9 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyCVEeyslRl2qHPMEYAqYRsIqHXaVjn3DoQ" />
         
-        <service android:name="br.sptrans.transportepublico.servico.NotificacaoDistanciaServico">
+        <service android:name="br.sptrans.transportepublico.servico.NotificacaoDistanciaServico" 
+            android:exported="false"
+            android:process=":cadeonibus">
 		 <intent-filter>
 		 <action android:name="NotificacaoDistancia" />
 		 <category android:name="android.intent.category.DEFAULT" />

@@ -9,11 +9,13 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnMultiChoiceClickListener;
 import android.content.Intent;
+import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import br.nanoitbrasil.mapa.IMapaServico;
@@ -35,17 +37,17 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 
 
-public class PontosActivity extends BaseFragmentActivity{
+public class PontosActivity extends BaseFragmentActivity {
 
 	private IMapaServico _mapaServico;
 	private CoordenadasModelo coordenadasTela;
 	private boolean onibusMaisProximo = false;
+	public boolean PRIMEIRA_VEZ = true;
 	
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
 		setContentView(R.layout.tela_pontos);
-		
 		SupportMapFragment mapFragment = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.tela_pontos.mapa);
 		GoogleMap map = mapFragment.getMap();		
 		
@@ -124,14 +126,7 @@ public class PontosActivity extends BaseFragmentActivity{
 			}
 		});
 		
-		Handler handler = new Handler();
-		handler.postDelayed(new Runnable() {
-			
-			@Override
-			public void run() {
-				carregaPontos();
-			}
-		}, 2000);
+		
 	}
 	
 	private CoordenadasModelo getCoordenadaTela()
@@ -154,14 +149,14 @@ public class PontosActivity extends BaseFragmentActivity{
 					@Override
 					protected List<PontoModelo> doInBackground(Void... params) {
 						
-						//RadioGroup stopMap_radioGroup_sentido = (RadioGroup)findViewById(R.id.stopMap_radioGroup_sentido);
-						//Integer sentido = stopMap_radioGroup_sentido.getCheckedRadioButtonId() == R.id.stopMap_radioGroup_bairro ? 2 : 1;
+						RadioGroup stopMap_radioGroup_sentido = (RadioGroup)findViewById(R.id.stopMap_radioGroup_sentido);
+						Integer sentido = stopMap_radioGroup_sentido.getCheckedRadioButtonId() == R.id.stopMap_radioGroup_bairro ? 2 : 1;
 					
 						
 						List<PontoModelo> paradas = new PontoServico(PontosActivity.this).pesquisaPontos(
 								String.valueOf(coordenadasTela.getLatitude()).replace(".",""), 
 								String.valueOf(coordenadasTela.getLongitude()).replace(".",""), 
-								SentidoIdentificador.Bairro, 
+								SentidoIdentificador.getPorValor(sentido), 
 								1);
 						
 						return paradas;
@@ -196,7 +191,7 @@ public class PontosActivity extends BaseFragmentActivity{
 			@Override
 			protected void onPreExecute() {
 				super.onPreExecute();
-				Toast.makeText(getApplicationContext(), "Carregando linhas...", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), getText(R.string.geral_atualizando), Toast.LENGTH_LONG).show();
 			}
 
 					@Override
@@ -249,9 +244,10 @@ public class PontosActivity extends BaseFragmentActivity{
 								{
 									if(onibusMaisProximo)
 									{
+										stopService(new Intent("NotificacaoDistancia"));
+										
 										Intent intent = abrirAtividadeMapaIntent(linhaModelos,new Intent("NotificacaoDistancia"));
 										intent.putExtra("pontoId", codigoParada);
-										stopService(intent);
 										startService(intent);
 									}
 									else
@@ -280,5 +276,24 @@ public class PontosActivity extends BaseFragmentActivity{
 		asyncTask.execute();
 	}
 
-
+	@Override
+	public void onLocationChanged(Location location) {
+		super.onLocationChanged(location);
+		if(location != null)
+		{
+			latLngUsuario = new LatLng(location.getLatitude(), location.getLongitude());
+			_mapaServico.vaiPara(latLngUsuario);
+			locationManager.removeUpdates(this);
+			
+			Handler handler = new Handler();
+			handler.postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+					carregaPontos();
+					_mapaServico.zoom(15);
+				}
+			}, 3000);
+		}
+	}
 }

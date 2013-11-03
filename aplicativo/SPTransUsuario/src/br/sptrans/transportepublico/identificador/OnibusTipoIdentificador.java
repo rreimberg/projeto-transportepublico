@@ -37,4 +37,22 @@ public class OnibusTipoIdentificador extends BaseIdentificador<Integer>{
 		
 		return Indefinido.getImagem();		
 	}
+
+	public static String getNome(int id)
+	{
+		if(Padrao.getValor() == 2)
+			return Padrao.getNome();
+		
+		if(MicroOnibus.getValor() == 3)
+			return MicroOnibus.getNome();
+		
+		if(Articulado.getValor() == 4)
+			return Articulado.getNome();
+		
+		if(BiArticulado.getValor() == 5)
+			return BiArticulado.getNome();
+		
+		
+		return Indefinido.getNome();	
+	}
 }

@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:gravity="center"
-                android:weightSum="3"
+                android:weightSum="2"
                 android:layout_weight="1" >
 
         <LinearLayout
@@ -27,7 +27,7 @@
                 android:background="@drawable/main_pesquisa" />
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="Pesquisa" />
         </LinearLayout>
@@ -46,9 +46,10 @@
                 android:background="@drawable/main_favorito" />
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="Favoritos" />
+
         </LinearLayout>
     </TableRow>
     
@@ -56,7 +57,7 @@
        android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:gravity="center"
-                android:weightSum="3"
+                android:weightSum="2"
                 android:layout_weight="1"  >
 
         <LinearLayout
@@ -73,7 +74,7 @@
                 android:background="@drawable/main_ponto" />
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="Pontos" />
         </LinearLayout>
@@ -88,10 +89,10 @@
                 android:id="@+tela_inicio/noticias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/main_ponto" />
+                android:background="@drawable/main_compartilhar" />
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="Noticias" />
            

@@ -34,7 +34,10 @@ public class FavoritoActivity extends BaseActivity {
 						linhaModelos.add((LinhaModelo)controleListView(R.tela_favorito.lista).getItemAtPosition(i));
 				}
 				
-				abrirAtividadeMapa(linhaModelos);
+				if(totalLinha != 0)
+					abrirAtividadeMapa(linhaModelos);
+				else
+					mensagem("Selecione ao menos um favorito");
 			}
 		});
 	}

@@ -3,9 +3,12 @@ package br.sptrans.transportepublico.usuario;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +21,7 @@ import android.widget.TextView;
 import br.nanoitbrasil.mapa.IMapaServico;
 import br.nanoitbrasil.mapa.MapaServico;
 import br.nanoitbrasil.mapa.Marcador;
-import br.sptrans.transportepublico.controle.SpinnerPopupControle;
+import br.sptrans.transportepublico.controle.AlertDialogListControle;
 import br.sptrans.transportepublico.identificador.EmpresaIdentificador;
 import br.sptrans.transportepublico.identificador.OnibusAvaliacaoIdentificador;
 import br.sptrans.transportepublico.identificador.OnibusLotacaoIdentificador;
@@ -47,6 +50,8 @@ public class OnibusActivity extends BaseFragmentActivity {
 	private String PREFIXO_SELECIONADO = "";
 	private String CODIGO_LINHA_SELECIONADO = "0";
 	private int TIPO_ONIBUS_SELECIONADO = 0;
+	private int PREFIXO_MONITORADO = 0;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +133,11 @@ public class OnibusActivity extends BaseFragmentActivity {
 				TextView textView = new TextView(getBaseContext());
 				textView.setText(textoDistancia);
 				linearLayout.addView(textView);
+				
+				TextView textViewLotacao = new TextView(getBaseContext());
+				textViewLotacao.setText("Lotação: Cheio");
+				textViewLotacao.setTypeface(Typeface.DEFAULT_BOLD);
+				linearLayout.addView(textViewLotacao);
 				return linearLayout;
 			}
 		});
@@ -137,19 +147,14 @@ public class OnibusActivity extends BaseFragmentActivity {
 			
 			@Override
 			public void onClick(View v) {
-				SpinnerPopupControle<TransitoIdentificador>  builder = new SpinnerPopupControle<TransitoIdentificador> (OnibusActivity.this,"Informe as condições de trânsito:",TransitoIdentificador.getTudo());
-				builder.setIcon(R.drawable.ic_launcher);
-				builder.setTitle("Trânsito");
-				builder.setPositiveButton("Enviar",new android.content.DialogInterface.OnClickListener() {
+			new AlertDialogListControle<TransitoIdentificador>(OnibusActivity.this, "Trânsito", 
+				TransitoIdentificador.getTudo(),new android.content.DialogInterface.OnClickListener() {
 					
 					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						mensagem("Obrigado por sua participação.");
+					public void onClick(DialogInterface dialog, int posicao) {
+						mensagem(getText(R.string.geral_envio_com_sucesso).toString());
 					}
-				});
-						
-				
-				builder.show();
+				}).show();
 			}
 		});
 		
@@ -157,39 +162,29 @@ public class OnibusActivity extends BaseFragmentActivity {
 			
 			@Override
 			public void onClick(View v) {
-				SpinnerPopupControle<OnibusLotacaoIdentificador>  builder = new SpinnerPopupControle<OnibusLotacaoIdentificador> (OnibusActivity.this,"Informe sobre as condições de lotação do ônibus:",OnibusLotacaoIdentificador.getTudo());
-				builder.setIcon(R.drawable.ic_launcher);
-				builder.setTitle("Lotação");
-				builder.setPositiveButton("Enviar",new android.content.DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						mensagem("Obrigado por sua participação.");
-					}
-				});
-						
-				
-				builder.show();
+				new AlertDialogListControle<OnibusLotacaoIdentificador>(OnibusActivity.this, "Lotação", 
+						OnibusLotacaoIdentificador.getTudo(),new android.content.DialogInterface.OnClickListener() {
+							
+							@Override
+							public void onClick(DialogInterface dialog, int posicao) {
+								mensagem(getText(R.string.geral_envio_com_sucesso).toString());
+							}
+						}).show();
 			}
 		});
 		
-			controleImageButton(R.tela_onibus.avaliacao).setOnClickListener(new OnClickListener() {
+		controleImageButton(R.tela_onibus.avaliacao).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				SpinnerPopupControle<OnibusAvaliacaoIdentificador>  builder = new SpinnerPopupControle<OnibusAvaliacaoIdentificador> (OnibusActivity.this,"Avalei o ônibus selecionado.",OnibusAvaliacaoIdentificador.getTudo());
-				builder.setIcon(R.drawable.ic_launcher);
-				builder.setTitle("Avaliação");
-				builder.setPositiveButton("Enviar",new android.content.DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						mensagem("Obrigado por sua participação.");
-					}
-				});
-						
-				
-				builder.show();
+				new AlertDialogListControle<OnibusAvaliacaoIdentificador>(OnibusActivity.this, "Avaliação", 
+						OnibusAvaliacaoIdentificador.getTudo(),new android.content.DialogInterface.OnClickListener() {
+							
+							@Override
+							public void onClick(DialogInterface dialog, int posicao) {
+								mensagem(getText(R.string.geral_envio_com_sucesso).toString());
+							}
+						}).show();
 			}
 		});
 	}
@@ -222,13 +217,16 @@ public class OnibusActivity extends BaseFragmentActivity {
 							mensagem(getText(R.string.geral_atualizando).toString());
 							for (LinhaModelo linha : _linhaModelos) {
 								if(linha.getOnibus() != null)
-									for (OnibusModelo onibus : linha.getOnibus()) {
+								{
+									for (OnibusModelo onibus : linha.getOnibus()) 
+									{
 										Marcador marcador = new Marcador(linha.getCodigoLinha(),
 												String.valueOf(onibus.getType()) + "," + onibus.getPrefixo(),
-												onibus.getIcone(),
+												PREFIXO_MONITORADO == Integer.parseInt(onibus.getPrefixo()) ? R.drawable.viewbus_icone_area1 : onibus.getIcone(),
 												onibus.getLatitudeDouble(),
 												onibus.getLongitudeDouble());
 										_mapaServico.carregaMarcador(marcador);	
+									}
 								}
 							}
 						}
@@ -273,15 +271,25 @@ public class OnibusActivity extends BaseFragmentActivity {
 		asyncTask.execute();		
 	}
 
+	public static void NotificacaoCancelar(Context context)
+	{
+		NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+		mNotificationManager.cancelAll();
+	}
+	
 	private void recebeLinha()
 	{
+		//NotificacaoCancelar(getApplicationContext());
 		stopService(new Intent("NotificacaoDistancia"));
+		
+		
 		Intent intent = getIntent();
         Bundle b = intent.getExtras();
         
         if(b.getBoolean("servico"))
         {
-        	Log.e("CoO", b.getString("linhaId"));
+        	Log.e("CoO", String.valueOf(b.getInt("monitorar")));
+        	PREFIXO_MONITORADO = b.getInt("monitorar");
         }
         
         String[] linhaIds = b.getString("linhaId").split(",");

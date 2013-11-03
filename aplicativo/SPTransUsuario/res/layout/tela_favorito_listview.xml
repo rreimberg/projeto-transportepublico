@@ -29,17 +29,20 @@
 	<TextView android:id="@+tela_favorito_listview/destino"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textColor="#000000"
       android:text="Destino: xxxxxxxxxxx"/>
 	
   <TextView android:id="@+tela_favorito_listview/origem" 
       android:layout_width="wrap_content" 
       android:layout_height="wrap_content"
+      android:textColor="#000000"
       android:text="Origem: yyyyyyyyyyyyyyyyyyy"/>
   
 <TextView
         android:id="@+tela_favorito_listview/letreiro"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
+        android:textColor="#000000"
         android:text="TextView" />
   </LinearLayout>
 

@@ -20,14 +20,15 @@
         android:layout_toLeftOf="@+tela_pesquisa/pesquisar"
         android:ems="10" />
 
-    <ImageButton
+    <Button
         android:id="@+tela_pesquisa/pesquisar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+tela_pesquisa/busca"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+tela_pesquisa/busca"
         android:layout_toRightOf="@+tela_pesquisa/textView1"
-        android:src="@drawable/ic_launcher" />
+        android:text="Ok" />
 
     <ListView
         android:id="@+tela_pesquisa/lista"

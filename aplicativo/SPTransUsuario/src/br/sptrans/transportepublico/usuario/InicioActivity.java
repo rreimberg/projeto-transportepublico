@@ -1,13 +1,10 @@
 package br.sptrans.transportepublico.usuario;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import br.sptrans.transportepublico.banco.BancoDados;
 import br.sptrans.transportepublico.banco.BancoDadosScript;
-import br.sptrans.transportepublico.controle.SpinnerPopupControle;
-import br.sptrans.transportepublico.identificador.TransitoIdentificador;
 
 public class InicioActivity extends BaseActivity{
 

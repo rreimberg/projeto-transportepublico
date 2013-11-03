@@ -9,8 +9,8 @@ public class OnibusLotacaoIdentificador extends BaseIdentificador<Integer>{
 		super(nome, valor);
 	}
 	
-	public static OnibusLotacaoIdentificador VazioComA = new OnibusLotacaoIdentificador("Vazio (com a)", 1);
-	public static OnibusLotacaoIdentificador VazioSemA = new OnibusLotacaoIdentificador("Vazio (sem a", 2);
+	public static OnibusLotacaoIdentificador VazioComA = new OnibusLotacaoIdentificador("Vazio (com acentos)", 1);
+	public static OnibusLotacaoIdentificador VazioSemA = new OnibusLotacaoIdentificador("Vazio (sem acentos)", 2);
 	public static OnibusLotacaoIdentificador Normal = new OnibusLotacaoIdentificador("Normal", 3);
 	public static OnibusLotacaoIdentificador Cheio = new OnibusLotacaoIdentificador("Cheio", 4);
 	public static OnibusLotacaoIdentificador Lotado = new OnibusLotacaoIdentificador("Lotado", 5);

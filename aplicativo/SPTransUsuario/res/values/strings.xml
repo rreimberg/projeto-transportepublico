@@ -18,6 +18,7 @@
     <string name="geral_atualizado_sucesso">Atualização realizada com sucesso.</string>
     <string name="geral_erro_inesperado">Ocorreu um erro inesperado.</string>
     <string name="geral_atualizando">Atualizando...</string>
+    <string name="geral_envio_com_sucesso">Informação enviada com sucesso.\nObrigado.</string>
     
     <!-- Tela Ônibus -->
     

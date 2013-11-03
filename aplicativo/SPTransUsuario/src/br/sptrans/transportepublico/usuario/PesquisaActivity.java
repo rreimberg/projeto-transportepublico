@@ -11,7 +11,6 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageButton;
 import br.sptrans.transportepublico.listview.PesquisaListView;
 import br.sptrans.transportepublico.modelo.LinhaModelo;
 import br.sptrans.transportepublico.modelo.PesquisaModelo;
@@ -24,8 +23,7 @@ public class PesquisaActivity extends BaseActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tela_pesquisa);
 		
-		ImageButton b = controleImageButton(R.tela_pesquisa.pesquisar);
-		b.setOnClickListener(new OnClickListener() {
+		controleButton(R.tela_pesquisa.pesquisar).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {

@@ -5,11 +5,11 @@
     android:layout_height="match_parent" >
     
 <fragment
-        android:id="@+tela_pontos/mapa"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        class="com.google.android.gms.maps.SupportMapFragment" />
+    android:id="@+tela_pontos/mapa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/stopMap_radioGroup_sentido"
+    class="com.google.android.gms.maps.SupportMapFragment" />
 
 <ImageButton
     android:id="@+tela_pontos/atualizar"
@@ -22,4 +22,27 @@
     android:background="@android:color/transparent"
     android:src="@drawable/atualizar" />
 
+<RadioGroup
+    android:id="@+id/stopMap_radioGroup_sentido"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:orientation="horizontal" >
+
+<RadioButton
+    android:id="@+id/stopMap_radioGroup_bairro"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:checked="true"
+    android:text="Sentido Bairro" />
+
+<RadioButton
+    android:id="@+id/stopMap_radioGroup_centro"
+    android:layout_width="wrap_content"
+    android:layout_height="31dp"
+    android:text="Sentido Centro" />
+
+ </RadioGroup>
 </RelativeLayout>
