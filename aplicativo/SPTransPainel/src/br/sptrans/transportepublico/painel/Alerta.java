@@ -99,7 +99,7 @@ public class Alerta extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle
-						(Alerta.this, "Confirmação", "Confirma o envio do alerta?");
+						(Alerta.this, "ConfirmaÃ§Ã£o", "Confirma o envio do alerta?");
 				
 				simplesDialogoControle.setPositiveButton("Sim", new android.content.DialogInterface.OnClickListener() {
 					
@@ -109,11 +109,11 @@ public class Alerta extends BaseActivity {
 					}
 				});
 				
-				simplesDialogoControle.setNegativeButton("Não", new android.content.DialogInterface.OnClickListener() {
+				simplesDialogoControle.setNegativeButton("NÃ£o", new android.content.DialogInterface.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						mensagem("Ação cancelada");
+						mensagem("AÃ§Ã£o cancelada");
 						dialog.dismiss();
 					}
 				});

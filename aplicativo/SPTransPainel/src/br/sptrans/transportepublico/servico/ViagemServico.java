@@ -30,7 +30,7 @@ private Activity _activity;
 		LinhaModelo linhaModelo = new LinhaModelo();
 		linhaModelo.setCodigoLinha("1196");
 		linhaModelo.setDenominacaoTPTS("Herplin");
-		linhaModelo.setDenominacaoTSTP("Praça");
+		linhaModelo.setDenominacaoTSTP("PraÃ§a");
 		linhaModelo.setSentido(2);
 		linhaModelo.setTipo("10");
 		linhaModelo.setEmpresa(1);
