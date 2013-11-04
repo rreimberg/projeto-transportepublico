@@ -4,6 +4,6 @@
 *.idea
 *bin
 *gen
-*out
+
 */.metadata
 build-log.xml
