@@ -85,7 +85,7 @@
                 android:layout_alignLeft="@+lotacao/nivel1"
                 android:layout_alignRight="@+lotacao/nivel5"
                 android:max="5"
-                />
+                android:progress="1"/>
 
 
     </RelativeLayout>
