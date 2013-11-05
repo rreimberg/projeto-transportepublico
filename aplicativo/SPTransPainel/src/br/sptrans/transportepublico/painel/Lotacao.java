@@ -18,41 +18,41 @@ public class Lotacao extends Activity {
         findViewById(R.lotacao.nivel1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                atualizaStatus(0);
+                atualizaStatus(1);
             }
         });
 
         findViewById(R.lotacao.nivel2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                atualizaStatus(1);
+                atualizaStatus(2);
             }
         });
 
         findViewById(R.lotacao.nivel3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                atualizaStatus(2);
+                atualizaStatus(3);
             }
         });
 
         findViewById(R.lotacao.nivel4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                atualizaStatus(3);
+                atualizaStatus(4);
             }
         });
 
         findViewById(R.lotacao.nivel5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                atualizaStatus(4);
+                atualizaStatus(5);
             }
         });
     }
 
-    void atualizaStatus(int status) {
-        ProgressBar progress = (ProgressBar) findViewById(R.lotacao.status);
-        progress.setProgress(status + 1);
+    void atualizaStatus(int nivel) {
+        ProgressBar status = (ProgressBar) findViewById(R.lotacao.status);
+        status.setProgress(nivel);
     }
 }
