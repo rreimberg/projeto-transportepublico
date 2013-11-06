@@ -16,7 +16,7 @@
             android:layout_height="match_parent" >
 
         <ImageButton
-                android:id="@+tela_lotacao/imagebutton_vazio"
+                android:id="@+tela_lotacao/imagebutton_assentos_livres"
                 style="@style/estilo_botao_lotacao"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+tela_lotacao/imagebutton_lento"
@@ -24,15 +24,15 @@
                 android:textColor="#ffffff" />
 
         <ImageButton
-                android:id="@+tela_lotacao/imagebutton_livre"
+                android:id="@+tela_lotacao/imagebutton_assentos_ocupados"
                 style="@style/estilo_botao_lotacao"
-                android:layout_alignLeft="@+tela_lotacao/imagebutton_lento"
+                android:layout_alignLeft="@+tela_lotacao/imagebutton_assentos_livres"
                 android:layout_alignParentTop="true"
                 android:src="@drawable/lotacao_assentos_cheios"
                 android:textColor="#ffffff" />
 
         <ImageButton
-                android:id="@+tela_lotacao/imagebutton_lento"
+                android:id="@+tela_lotacao/imagebutton_cheio"
                 style="@style/estilo_botao_lotacao"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
@@ -41,10 +41,10 @@
                 android:textColorHint="#ffffff" />
 
         <ImageButton
-                android:id="@+tela_lotacao/imagebutton_parado"
+                android:id="@+tela_lotacao/imagebutton_lotado"
                 style="@style/estilo_botao_lotacao"
                 android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+tela_lotacao/imagebutton_lento"
+                android:layout_toRightOf="@+tela_lotacao/imagebutton_cheio"
                 android:src="@drawable/lotacao_lotado"
                 android:textColor="#ffffff" />
 
