@@ -190,7 +190,7 @@ public class Viagem extends BaseActivity {
 			}
 		});
 		
-		simplesDialogoControle.setNegativeButton("N„o", new android.content.DialogInterface.OnClickListener() {
+		simplesDialogoControle.setNegativeButton("N√£o", new android.content.DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -207,21 +207,21 @@ public class Viagem extends BaseActivity {
 		StringBuilder mensagens = new StringBuilder();
 		if(LINHA_CODIGO_SELECIONADA == 0)
 		{
-			mensagens.append("Selecione um destino v·lido.\n");
+			mensagens.append("Selecione um destino v√°lido.\n");
 			edittext_codigo_linha.setFocusable(true);
 			valido = false;
 		}
 
 		if(edittext_contador.length() == 0)
 		{
-			mensagens.append("Contador da catraca inv·lido.\n");
+			mensagens.append("Contador da catraca inv√°lido.\n");
 			edittext_contador.setFocusable(true);
 			valido = false;
 		}
 		
 		if(edittext_prefixo_linha_valor.getText() == null || edittext_prefixo_linha_valor.length() == 0)
 		{
-			mensagens.append("Informe o prefixo do veÌculo.\n");
+			mensagens.append("Informe o prefixo do ve√≠culo.\n");
 			edittext_prefixo_linha_valor.setFocusable(true);
 			valido = false;
 		}

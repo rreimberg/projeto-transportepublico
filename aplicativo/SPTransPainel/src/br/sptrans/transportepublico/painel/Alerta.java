@@ -136,7 +136,7 @@ public class Alerta extends BaseActivity {
 		}
     	
     	SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle
-				(Alerta.this, "Confirmação", String.format("Confirma o envio do alerta: %s?",AlertaIdentificador.retornaPorValor(ALERTA_SELECIONADO).getNome()));
+				(Alerta.this, "ConfirmaÃ§Ã£o", String.format("Confirma o envio do alerta: %s?",AlertaIdentificador.retornaPorValor(ALERTA_SELECIONADO).getNome()));
 		
 		simplesDialogoControle.setPositiveButton("Sim", new android.content.DialogInterface.OnClickListener() {
 			
@@ -148,11 +148,11 @@ public class Alerta extends BaseActivity {
 			}
 		});
 		
-		simplesDialogoControle.setNegativeButton("Não", new android.content.DialogInterface.OnClickListener() {
+		simplesDialogoControle.setNegativeButton("NÃ£o", new android.content.DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				mensagem("Ação cancelada");
+				mensagem("AÃ§Ã£o cancelada");
 				dialog.dismiss();
 			}
 		});
