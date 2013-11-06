@@ -217,7 +217,7 @@ public class Viagem extends BaseActivity {
 
 		if(edittext_contador.length() < 6)
 		{
-			mensagens.append("Informe o seis digitos da catraca.\n");
+			mensagens.append("Informe os seis digitos da catraca.\n");
 			edittext_contador.setFocusable(true);
 			valido = false;
 		}

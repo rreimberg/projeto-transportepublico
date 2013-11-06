@@ -96,6 +96,6 @@ public class BaseActivity extends Activity{
 	
 	@Override
     public void onBackPressed() {
-        //mensagem("Não é possível sair da aplicação.");
+        //mensagem("NÃ£o Ã© possÃ­vel sair da aplicaÃ§Ã£o.");
     }
 }

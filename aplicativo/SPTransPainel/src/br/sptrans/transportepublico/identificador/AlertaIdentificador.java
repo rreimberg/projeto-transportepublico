@@ -17,9 +17,9 @@ public class AlertaIdentificador extends BaseIdentificador<Integer> {
 	}
 
 	public static AlertaIdentificador Roubo = new AlertaIdentificador("Roubo", 1, R.tela_alerta.button_roubo, "#990000");
-	public static AlertaIdentificador Depredacao = new AlertaIdentificador("Depredação", 2, R.tela_alerta.button_ataque, "#990000");
-	public static AlertaIdentificador Incendio = new AlertaIdentificador("Incêndio",3, R.tela_alerta.button_incendio, "#990000");
-	public static AlertaIdentificador Bagunca = new AlertaIdentificador("Bagunça", 4, R.tela_alerta.button_bagunca, "#990000");
+	public static AlertaIdentificador Depredacao = new AlertaIdentificador("DepredaÃ§Ã£o", 2, R.tela_alerta.button_ataque, "#990000");
+	public static AlertaIdentificador Incendio = new AlertaIdentificador("IncÃªndio",3, R.tela_alerta.button_incendio, "#990000");
+	public static AlertaIdentificador Bagunca = new AlertaIdentificador("BagunÃ§a", 4, R.tela_alerta.button_bagunca, "#990000");
 	public static AlertaIdentificador SomAlto = new AlertaIdentificador("Som Alto", 5, R.tela_alerta.button_som_alto, "#990000");
 	public static AlertaIdentificador Outros = new AlertaIdentificador("Outros", 6, R.tela_alerta.button_outros, "#990000");
 	

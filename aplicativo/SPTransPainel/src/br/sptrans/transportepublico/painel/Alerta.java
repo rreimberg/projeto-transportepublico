@@ -140,7 +140,7 @@ public class Alerta extends BaseActivity {
     		}
 		}
     	
-    	SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Alerta.this, "Confirmação", String.format("Confirma o envio do alerta: %s?\nCaso necessite, informe mais detalhes abaixo:",AlertaIdentificador.retornaPorValor(ALERTA_SELECIONADO).getNome()));
+    	SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Alerta.this, "ConfirmaÃ§Ã£o", String.format("Confirma o envio do alerta: %s?\nCaso necessite, informe mais detalhes abaixo:",AlertaIdentificador.retornaPorValor(ALERTA_SELECIONADO).getNome()));
 		
     	LinearLayout linearLayout = new LinearLayout(getApplicationContext());
 		linearLayout.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
@@ -163,11 +163,11 @@ public class Alerta extends BaseActivity {
 			}
 		});
 		
-		simplesDialogoControle.setNegativeButton("Não", new android.content.DialogInterface.OnClickListener() {
+		simplesDialogoControle.setNegativeButton("NÃ£o", new android.content.DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				mensagem("Ação cancelada.");
+				mensagem("AÃ§Ã£o cancelada.");
 				dialog.dismiss();
 			}
 		});

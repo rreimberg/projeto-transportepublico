@@ -31,13 +31,13 @@ public class Transito extends BaseActivity {
 							((ImageButton)findViewById(transitoIdentificador.getControleId())).setBackgroundColor(Color.parseColor(transitoIdentificador.getCorId()));
 					}
 					
-					SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Transito.this, "Tr‚nsito", "Confirma um envio de alerta de tr‚nsito?");
+					SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Transito.this, "Tr√¢nsito", "Confirma um envio de alerta de tr√¢nsito?");
 					simplesDialogoControle.setPositiveButton("Sim", new android.content.DialogInterface.OnClickListener(
 							) {
 						
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
-							mensagem("InformaÁ„o enviada com sucesso.");
+							mensagem("Informa√ß√£o enviada com sucesso.");
 						}
 					}); 
 					simplesDialogoControle.show();
