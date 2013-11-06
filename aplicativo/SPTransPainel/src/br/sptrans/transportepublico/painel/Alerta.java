@@ -159,4 +159,9 @@ public class Alerta extends BaseActivity {
 		
 		simplesDialogoControle.show();
     }
+
+    @Override
+    public void onBackPressed() {
+        mensagem("Não é possível sair da aplicação.");
+    }
 }

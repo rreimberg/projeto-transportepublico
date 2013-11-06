@@ -55,4 +55,9 @@ public class Lotacao extends BaseActivity {
         ProgressBar status = (ProgressBar) findViewById(R.lotacao.status);
         status.setProgress(nivel);
     }
+
+    @Override
+    public void onBackPressed() {
+        mensagem("Não é possível sair da aplicação.");
+    }
 }
