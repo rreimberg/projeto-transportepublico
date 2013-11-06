@@ -1,13 +1,5 @@
 package br.sptrans.transportepublico.painel;
 
-<<<<<<< HEAD
-import android.app.DialogFragment;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-=======
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.ListFragment;
@@ -21,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
->>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 
 /**
  * Created by rreimberg on 11/3/13.

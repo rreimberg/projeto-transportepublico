@@ -1,12 +1,5 @@
 package br.sptrans.transportepublico.painel;
 
-<<<<<<< HEAD
-import android.app.Fragment;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-=======
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
@@ -17,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
->>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 
 /**
  * Created by rreimberg on 11/3/13.
