@@ -29,12 +29,23 @@ import br.sptrans.transportepublico.servico.ViagemServico;
 public class Viagem extends BaseActivity {
 
 	private ImageButton imagebutton_pesquisar = null;
+<<<<<<< HEAD
 
 	private Button imagebutton_iniciar_viagem,imagebutton_abortar_viagem,imagebutton_finalizar_viagem = null;
 	private EditText edittext_codigo_linha,edittext_contador,edittext_prefixo_linha_valor = null;
 	private TextView textview_origem_valor,textview_destino_valor,textview_inicio_valor = null;
 	
 	private List<LinhaModelo> _linhaModelos = null;	
+=======
+	private Button imagebutton_iniciar_viagem = null;
+	private EditText edittext_codigo_linha = null;
+	private EditText edittext_contador = null;
+	private TextView textview_origem_valor = null;
+	private TextView textview_destino_valor = null;
+	private TextView textview_inicio_valor = null;
+
+	private List<LinhaModelo> _linhaModelos = null;
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 	private int LINHA_CODIGO_SELECIONADA = 0;
 	private boolean VIAGEM_INICIADA = false;
 
@@ -125,6 +136,7 @@ public class Viagem extends BaseActivity {
 
 			@Override
 			public void onClick(View v) {
+<<<<<<< HEAD
 
 				iniciarViagem();
 			}			
@@ -142,13 +154,33 @@ public class Viagem extends BaseActivity {
 		};
     }
  
+=======
+				iniciarPararViagem();
+			}
+		};
+    }
+
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
     private void selecionaViagem(LinhaModelo linhaModelo)
     {
     	LINHA_CODIGO_SELECIONADA = Integer.parseInt(linhaModelo.getCodigoLinha());
     	textview_destino_valor.setText(linhaModelo.getDestino());
     	textview_origem_valor.setText(linhaModelo.getOrigem());
+<<<<<<< HEAD
     }
     
+=======
+
+    }
+
+    private void iniciarPararViagem() {
+    	if(VIAGEM_INICIADA)
+    		pararViagem();
+    	else
+    		iniciarViagem();
+	}
+
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
     private void pararViagem() {
     	imagebutton_iniciar_viagem.setBackgroundColor(Color.rgb(0, 128, 0));
 		imagebutton_iniciar_viagem.setText("Iniciar\nViagem");
@@ -180,6 +212,7 @@ public class Viagem extends BaseActivity {
 				imagebutton_iniciar_viagem.setBackgroundColor(Color.RED);
 				imagebutton_iniciar_viagem.setText("Finalizar\nViagem");
 				VIAGEM_INICIADA = true;
+<<<<<<< HEAD
 				
 				imagebutton_iniciar_viagem.setVisibility(View.GONE);
 				imagebutton_finalizar_viagem.setVisibility(View.VISIBLE);
@@ -192,6 +225,15 @@ public class Viagem extends BaseActivity {
 		
 		simplesDialogoControle.setNegativeButton("Não", new android.content.DialogInterface.OnClickListener() {
 			
+=======
+				new ViagemServico(Viagem.this).inserirViagem(
+						new ViagemModelo(0, UUID.randomUUID().toString(), LINHA_CODIGO_SELECIONADA,
+								PREFIXO_ONIBUS, 0, 0, null));
+			}
+		});
+		simplesDialogoControle.setNegativeButton("NÃ£o", new android.content.DialogInterface.OnClickListener() {
+
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				dialog.dismiss();
@@ -207,13 +249,18 @@ public class Viagem extends BaseActivity {
 		StringBuilder mensagens = new StringBuilder();
 		if(LINHA_CODIGO_SELECIONADA == 0)
 		{
+<<<<<<< HEAD
 			mensagens.append("Selecione um destino válido.\n");
+=======
+			mensagens.append("Selecione um destino vÃ¡lido\n");
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 			edittext_codigo_linha.setFocusable(true);
 			valido = false;
 		}
 
 		if(edittext_contador.length() == 0)
 		{
+<<<<<<< HEAD
 			mensagens.append("Contador da catraca inválido.\n");
 			edittext_contador.setFocusable(true);
 			valido = false;
@@ -226,6 +273,13 @@ public class Viagem extends BaseActivity {
 			valido = false;
 		}
 		
+=======
+			mensagens.append("Contador da catraca invÃ¡lido\n");
+			edittext_contador.setFocusable(true);
+			valido = false;
+		}
+
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 		if(!valido)
 			mensagem(mensagens.toString());
 

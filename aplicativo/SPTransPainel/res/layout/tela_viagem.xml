@@ -12,11 +12,28 @@
               android:layout_gravity="center_vertical"/>
 
 
+<<<<<<< HEAD
     <RelativeLayout
+=======
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+<<<<<<< HEAD
+=======
+
+    <EditText
+        android:id="@+tela_viagem/edittext_codigo_linha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+tela_viagem/textview_codigo_linha"
+        android:layout_alignRight="@+tela_viagem/imagebutton_iniciar_viagem"
+        android:ems="10"
+        android:text="695H"
+         />
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 
     <ImageButton
         android:id="@+tela_viagem/imagebutton_pesquisar"
@@ -107,6 +124,7 @@
         android:layout_marginTop="24dp"
         android:text="Data/Hora de Ínicio:"
         android:textSize="25dp" />
+<<<<<<< HEAD
 
 
     <EditText
@@ -198,3 +216,8 @@
 
 
 </LinearLayout>
+=======
+</RelativeLayout>
+
+</LinearLayout>
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a

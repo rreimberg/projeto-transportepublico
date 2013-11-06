@@ -4,6 +4,7 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageButton
@@ -40,4 +41,50 @@
         android:background="#008000"
         android:src="@drawable/icone_viagem" />
 
+=======
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+menu/viagem"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_viagem"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+menu/transito"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_transito"
+            android:layout_below="@+menu/viagem"
+            android:layout_alignLeft="@+menu/viagem"
+            android:layout_marginTop="20dp"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+menu/lotacao"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_lotacao"
+            android:layout_below="@+menu/transito"
+            android:layout_alignLeft="@+menu/transito"
+            android:layout_marginTop="20dp"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+menu/alerta"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_alertas"
+            android:layout_below="@+menu/lotacao"
+            android:layout_alignLeft="@+menu/lotacao"
+            android:layout_marginTop="20dp"/>
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 </RelativeLayout>

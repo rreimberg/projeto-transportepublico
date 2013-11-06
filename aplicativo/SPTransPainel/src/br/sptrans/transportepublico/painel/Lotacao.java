@@ -1,5 +1,10 @@
 package br.sptrans.transportepublico.painel;
 
+<<<<<<< HEAD
+=======
+import android.app.Activity;
+import android.content.DialogInterface;
+>>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
