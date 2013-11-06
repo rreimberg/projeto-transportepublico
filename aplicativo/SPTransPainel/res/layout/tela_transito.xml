@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent" 
+              android:layout_height="match_parent">
+
+    <fragment class="br.sptrans.transportepublico.painel.MenuFragment"
+              android:id="@+id/menu" android:layout_weight="1"
+              android:layout_width="0px" android:layout_height="match_parent"
+              tools:layout="@layout/simple_list_item_activated_1"
+              android:layout_gravity="center_vertical"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageButton
+            android:id="@+tela_transito/imagebutton_fluindo"
+            style="@style/estilo_botao_transito"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+tela_transito/imagebutton_lento"
+            android:src="@drawable/transito_fluindo"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+tela_transito/imagebutton_livre"
+            style="@style/estilo_botao_transito"
+            android:layout_alignLeft="@+tela_transito/imagebutton_lento"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/transito_livre"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+tela_transito/imagebutton_lento"
+            style="@style/estilo_botao_transito"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/transito_lento"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageButton
+            android:id="@+tela_transito/imagebutton_parado"
+            style="@style/estilo_botao_transito"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+tela_transito/imagebutton_lento"
+            android:src="@drawable/transito_parado"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

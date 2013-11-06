@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <fragment class="br.sptrans.transportepublico.painel.MenuFragment"
+              android:id="@+id/menu" android:layout_weight="1"
+              android:layout_width="0px" android:layout_height="match_parent"
+              tools:layout="@layout/simple_list_item_activated_1"
+              android:layout_gravity="center_vertical"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Lotação"
+                android:id="@+id/textView"
+                android:layout_marginTop="26dp"
+                android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+lotacao/nivel1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/lotacao_1"
+                    android:layout_marginRight="50dp"
+                    android:layout_below="@+id/textView"
+                    android:layout_toLeftOf="@+lotacao/nivel2"
+                    android:layout_alignTop="@+lotacao/nivel3"
+                />
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+lotacao/nivel2"
+                    android:background="@drawable/lotacao_2"
+                    android:layout_marginRight="50dp"
+                    android:layout_alignTop="@+lotacao/nivel3"
+                    android:layout_toLeftOf="@+id/textView"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+lotacao/nivel3"
+                    android:background="@drawable/lotacao_3"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+lotacao/nivel4"
+                    android:layout_gravity="center"
+                    android:background="@drawable/lotacao_4"
+                    android:layout_alignTop="@+lotacao/nivel3"
+                    android:layout_toRightOf="@+id/textView"
+                    android:layout_marginLeft="50dp"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+lotacao/nivel5"
+                    android:background="@drawable/lotacao_5"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_alignTop="@+lotacao/nivel3"
+                    android:layout_toRightOf="@+lotacao/nivel4"
+                    android:layout_marginLeft="50dp"/>
+
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+lotacao/status"
+                android:layout_below="@+lotacao/nivel1"
+                android:layout_marginTop="35dp"
+                android:layout_alignLeft="@+lotacao/nivel1"
+                android:layout_alignRight="@+lotacao/nivel5"
+                android:max="5"
+                android:progress="1"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

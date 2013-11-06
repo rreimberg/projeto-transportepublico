@@ -1,7 +1,7 @@
 package br.sptrans.transportepublico.repositorio.tabela;
 
 
-public class AlertaViagem extends BaseTabela{
+public class AlertaViagemTabela extends BaseTabela{
 
 	public static String Id = "PK_int_ViagemAlerta";
 	public static String ViagemId = "FK_vch_ViagemGUID";

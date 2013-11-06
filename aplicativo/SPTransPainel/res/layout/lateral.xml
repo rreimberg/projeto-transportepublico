@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:id="@+menu/transito"
+        style="@style/estilo_botao_menu"
+        android:layout_alignLeft="@+menu/viagem"
+        android:layout_below="@+menu/viagem"
+        android:background="#cc8400"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/icone_transito" />
+
+    <ImageButton
+        android:id="@+menu/lotacao"
+        style="@style/estilo_botao_menu"
+        android:layout_alignLeft="@+menu/transito"
+        android:layout_below="@+menu/transito"
+        android:background="#000066"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/icone_lotacao" />
+
+    <ImageButton
+        android:id="@+menu/alerta"
+        style="@style/estilo_botao_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+menu/lotacao"
+        android:background="#990000"
+        android:src="@drawable/icone_alertas" />
+
+    <ImageButton
+        android:id="@+menu/viagem"
+        style="@style/estilo_botao_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#008000"
+        android:src="@drawable/icone_viagem" />
+
+</RelativeLayout>
