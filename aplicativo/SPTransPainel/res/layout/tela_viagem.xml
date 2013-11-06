@@ -181,7 +181,9 @@
             android:layout_alignBaseline="@+tela_viagem/textview_prefixo_linha_descricao"
             android:layout_alignBottom="@+tela_viagem/textview_prefixo_linha_descricao"
             android:layout_alignLeft="@+tela_viagem/edittext_codigo_linha"
-            android:text="6 2127"
+            android:text="62127"
+            android:inputType="number"
+        	android:maxLength="5"
             android:ems="10"/>
 
         <TextView
@@ -191,7 +193,7 @@
             android:layout_alignLeft="@+tela_viagem/textview_codigo_linha"
             android:layout_alignParentTop="true"
             android:layout_marginTop="43dp"
-            android:text="Prefixo da Linha:"
+            android:text="Prefixo do Ônibus:"
             android:textSize="25dp" />
 
 </RelativeLayout>
