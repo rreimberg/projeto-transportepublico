@@ -19,17 +19,17 @@
                 android:id="@+tela_lotacao/imagebutton_assentos_livres"
                 style="@style/estilo_botao_lotacao"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+tela_lotacao/imagebutton_lento"
                 android:src="@drawable/lotacao_assentos_livres"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                />
 
         <ImageButton
                 android:id="@+tela_lotacao/imagebutton_assentos_ocupados"
                 style="@style/estilo_botao_lotacao"
-                android:layout_alignLeft="@+tela_lotacao/imagebutton_assentos_livres"
-                android:layout_alignParentTop="true"
                 android:src="@drawable/lotacao_assentos_cheios"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+tela_lotacao/imagebutton_lotado"/>
 
         <ImageButton
                 android:id="@+tela_lotacao/imagebutton_cheio"
