@@ -32,34 +32,31 @@ public class MenuFragment extends DialogFragment {
         getActivity().findViewById(R.menu.viagem).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity().getApplicationContext(), Viagem.class);
-                startActivity(i);
+                startActivity(new Intent(getActivity().getApplicationContext(), Viagem.class));
             }
         });
 
         getActivity().findViewById(R.menu.transito).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity().getApplicationContext(), Transito.class);
-                startActivity(i);
+                startActivity(new Intent(getActivity().getApplicationContext(), Transito.class));
             }
         });
 
         getActivity().findViewById(R.menu.lotacao).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity().getApplicationContext(), Lotacao.class);
-                startActivity(i);
+                startActivity(new Intent(getActivity().getApplicationContext(), Lotacao.class));
             }
         });
 
         getActivity().findViewById(R.menu.alerta).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity().getApplicationContext(), Alerta.class);
-                startActivity(i);
+                startActivity(new Intent(getActivity().getApplicationContext(), Alerta.class));
             }
         });
     }
 
+    
 }

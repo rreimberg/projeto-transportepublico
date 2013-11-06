@@ -159,7 +159,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:background="#008000"
-            android:text="Iniciar\nViagem"
+            android:text="Iniciar Viagem"
             android:textColor="#ffffff"
             android:textStyle="bold" />
 

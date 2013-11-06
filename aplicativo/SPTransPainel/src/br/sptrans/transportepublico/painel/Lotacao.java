@@ -1,5 +1,6 @@
 package br.sptrans.transportepublico.painel;
 
+import br.sptrans.transportepublico.identificador.MenuIdentificador;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -14,11 +15,5 @@ public class Lotacao extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.tela_lotacao);
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        mensagem("Não é possível sair da aplicação.");
     }
 }

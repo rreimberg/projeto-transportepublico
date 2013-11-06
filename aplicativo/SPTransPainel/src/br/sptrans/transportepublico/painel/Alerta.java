@@ -5,9 +5,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import br.sptrans.transportepublico.controle.SimplesDialogoControle;
 import br.sptrans.transportepublico.identificador.AlertaIdentificador;
+import br.sptrans.transportepublico.identificador.MenuIdentificador;
 
 /**
  * Created by luyzfernando on 03/11/2013.
@@ -86,6 +90,7 @@ public class Alerta extends BaseActivity {
 			}
 		});
 	
+		menuSelecionado(MenuIdentificador.Alertas);
 		/*
 		button_enviar.setOnClickListener(new OnClickListener() {
 			
@@ -135,33 +140,38 @@ public class Alerta extends BaseActivity {
     		}
 		}
     	
-    	SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle
-				(Alerta.this, "Confirmação", String.format("Confirma o envio do alerta: %s?",AlertaIdentificador.retornaPorValor(ALERTA_SELECIONADO).getNome()));
+    	SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Alerta.this, "Confirma��o", String.format("Confirma o envio do alerta: %s?\nCaso necessite, informe mais detalhes abaixo:",AlertaIdentificador.retornaPorValor(ALERTA_SELECIONADO).getNome()));
 		
+    	LinearLayout linearLayout = new LinearLayout(getApplicationContext());
+		linearLayout.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+		linearLayout.setOrientation(LinearLayout.VERTICAL);
+		
+		EditText editText = new EditText(getApplicationContext());
+		editText.setMaxLines(2);
+		editText.setTextColor(Color.BLACK);
+		linearLayout.addView(editText);
+    	simplesDialogoControle.setView(linearLayout);
+    	
+    	
 		simplesDialogoControle.setPositiveButton("Sim", new android.content.DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				mensagem(AlertaIdentificador.retornaPorValor(ALERTA_SELECIONADO).getNome());
+				mensagem("Alerta enviado com sucesso.");
 				
 				
 			}
 		});
 		
-		simplesDialogoControle.setNegativeButton("Não", new android.content.DialogInterface.OnClickListener() {
+		simplesDialogoControle.setNegativeButton("N�o", new android.content.DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				mensagem("Ação cancelada");
+				mensagem("A��o cancelada.");
 				dialog.dismiss();
 			}
 		});
 		
 		simplesDialogoControle.show();
-    }
-
-    @Override
-    public void onBackPressed() {
-        mensagem("Não é possível sair da aplicação.");
     }
 }

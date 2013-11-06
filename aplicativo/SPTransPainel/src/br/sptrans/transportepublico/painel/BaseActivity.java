@@ -1,8 +1,10 @@
 package br.sptrans.transportepublico.painel;
 
+import br.sptrans.transportepublico.identificador.MenuIdentificador;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -81,4 +83,19 @@ public class BaseActivity extends Activity{
 
 		}
 	}
+	
+	protected void menuSelecionado(MenuIdentificador viagem)
+    {
+    	for (MenuIdentificador item : MenuIdentificador.retornaTudo()) {
+			if(viagem.getControleId() != item.getControleId())
+				((ImageButton)findViewById(item.getControleId())).setBackgroundColor(Color.GRAY);
+			else
+				((ImageButton)findViewById(item.getControleId())).setBackgroundColor(Color.parseColor(item.getCorId()));
+		}
+    }
+	
+	@Override
+    public void onBackPressed() {
+        //mensagem("Não é possível sair da aplicação.");
+    }
 }

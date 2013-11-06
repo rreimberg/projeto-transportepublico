@@ -13,8 +13,16 @@ public class SimplesDialogoControle extends Builder implements DialogInterface{
 		setTitle(titulo);
 		setMessage(descricao);
 		setIcon(R.drawable.ic_launcher);
+		setNegativeButton("Não", new OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+			}
+		});
+		
 	}
-
+	
 	@Override
 	public void cancel() {
 		cancel();
