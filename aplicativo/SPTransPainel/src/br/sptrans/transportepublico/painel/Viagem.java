@@ -155,7 +155,7 @@ public class Viagem extends BaseActivity {
     
     private void pararViagem() {
     	imagebutton_iniciar_viagem.setBackgroundColor(Color.rgb(0, 128, 0));
-		imagebutton_iniciar_viagem.setText("Iniciar\nViagem");
+		imagebutton_iniciar_viagem.setText("Iniciar Viagem");
 
 		LINHA_CODIGO_SELECIONADA = 0;
 		textview_destino_valor.setText(null);
@@ -182,7 +182,7 @@ public class Viagem extends BaseActivity {
 			public void onClick(DialogInterface dialog, int which) {
 				textview_inicio_valor.setText(DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime()).toString());
 				imagebutton_iniciar_viagem.setBackgroundColor(Color.RED);
-				imagebutton_iniciar_viagem.setText("Finalizar\nViagem");
+				imagebutton_iniciar_viagem.setText("Finalizar Viagem");
 				VIAGEM_INICIADA = true;
 				
 				imagebutton_iniciar_viagem.setVisibility(View.GONE);

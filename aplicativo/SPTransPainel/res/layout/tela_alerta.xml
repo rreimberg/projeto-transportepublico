@@ -7,14 +7,16 @@
               android:weightSum="7">
 
     <fragment class="br.sptrans.transportepublico.painel.MenuFragment"
-              android:id="@+id/menu" android:layout_weight="6"
-              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:id="@+id/menu" 
+              android:layout_weight="6"
+              android:layout_width="match_parent" 
+              android:layout_height="match_parent"
               tools:layout="@layout/simple_list_item_activated_1"
               android:layout_gravity="center_vertical"/>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="1" >
 

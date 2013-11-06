@@ -27,9 +27,8 @@
 
 
     <style name="estilo_botao_lotacao" parent="@android:style/Widget.Button">
-        <item name="android:layout_width">445dp</item>
-        <item name="android:layout_height">225dp</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:layout_width">435dp</item>
+        <item name="android:layout_height">245dp</item>
         <item name="android:layout_margin">1dp</item>
         <item name="android:background">#000066</item>
         <item name="android:scaleType">centerInside</item>

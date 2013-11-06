@@ -3,13 +3,11 @@ package br.sptrans.transportepublico.painel;
 import br.sptrans.transportepublico.controle.SimplesDialogoControle;
 import br.sptrans.transportepublico.identificador.LotacaoIdentificador;
 import br.sptrans.transportepublico.identificador.MenuIdentificador;
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ProgressBar;
 
 /**
  * Created by rreimberg on 10/31/13.
