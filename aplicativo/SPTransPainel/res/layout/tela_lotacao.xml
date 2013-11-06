@@ -13,14 +13,7 @@
 
     <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-<<<<<<< HEAD
-            android:layout_gravity="center">
-=======
-            android:layout_gravity="center"
-            >
->>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
-
+            android:layout_height="match_parent"            android:layout_gravity="center">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

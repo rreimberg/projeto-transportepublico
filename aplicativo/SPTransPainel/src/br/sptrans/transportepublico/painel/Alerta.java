@@ -128,7 +128,7 @@ public class Alerta extends BaseActivity {
     	for (AlertaIdentificador item : AlertaIdentificador.retornaTudo()) {
     		if(controleId != item.getControleId())
     			controleImageButton(item.getControleId()).setBackgroundColor(Color.GRAY);
-    		else
+    		else 
     		{
     			controleImageButton(item.getControleId()).setBackgroundColor(Color.parseColor(item.getCorId()));
     			ALERTA_SELECIONADO = item.getValor();

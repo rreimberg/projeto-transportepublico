@@ -18,13 +18,8 @@
 
     <application
         android:allowBackup="true"
-<<<<<<< HEAD
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" 
-=======
-        android:icon="@drawable/ic_launcher_web"
-        android:label="@string/app_name"
->>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
         android:theme="@style/AppTheme">
 
         <activity
@@ -32,7 +27,7 @@
             android:label="@string/app_name"
             android:screenOrientation="landscape">
             <intent-filter>
-<<<<<<< HEAD
+
                  <action android:name="android.intent.action.MAIN"/>
                  <category android:name="android.intent.category.LAUNCHER"/> 
            
@@ -45,32 +40,7 @@
         <activity android:name=".Lotacao" android:screenOrientation="landscape"/>
         <activity android:name=".Alerta"  	  android:screenOrientation="landscape"	  android:label="Alertas">
         </activity>
-=======
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".Index" android:screenOrientation="landscape" />
-        <activity android:name=".Transito" android:screenOrientation="landscape"/>
-        <activity android:name=".Lotacao" android:screenOrientation="landscape"/>
-        <activity android:name=".Alerta" android:screenOrientation="landscape">
-
-        </activity>
-      <!--
-         <activity
-            android:name="br.sptrans.transportepublico.painel.ViagemDetailActivity"
-            android:label="@string/title_viagem_detail"
-            android:parentActivityName=".ViagemListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ViagemListActivity" >
-            </meta-data>
-        </activity>
-         -->
-
->>>>>>> 90ed7dff91a1cbafb9a16988e9f1d22ad0357e9a
     </application>
      <!-- <category android:name="android.intent.category.DEFAULT"/>
                <category android:name="android.intent.category.HOME">
