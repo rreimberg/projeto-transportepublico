@@ -33,6 +33,7 @@
             </intent-filter>
         </activity>
               
+<<<<<<< HEAD
         <activity android:name=".Index" android:screenOrientation="landscape" />
         
         <activity android:name=".Transito" 
@@ -49,6 +50,11 @@
          android:screenOrientation="landscape"
          android:label="Alertas"
          android:launchMode="singleInstance">
+=======
+        <activity android:name=".Transito" android:screenOrientation="landscape"/>
+        <activity android:name=".Lotacao" android:screenOrientation="landscape"/>
+        <activity android:name=".Alerta"  	  android:screenOrientation="landscape"	  android:label="Alertas">
+>>>>>>> 715b610aa7261641d58e11341ee34026c0c9f15c
         </activity>
 
     </application>
