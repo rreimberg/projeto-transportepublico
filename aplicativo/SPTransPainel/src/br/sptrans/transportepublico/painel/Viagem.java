@@ -18,6 +18,7 @@ import br.sptrans.transportepublico.banco.BancoDados;
 import br.sptrans.transportepublico.banco.BancoDadosScript;
 import br.sptrans.transportepublico.controle.LinhaDialogoControle;
 import br.sptrans.transportepublico.controle.SimplesDialogoControle;
+import br.sptrans.transportepublico.identificador.MenuIdentificador;
 import br.sptrans.transportepublico.modelo.LinhaModelo;
 import br.sptrans.transportepublico.modelo.ViagemModelo;
 import br.sptrans.transportepublico.servico.ViagemServico;
@@ -51,6 +52,8 @@ public class Viagem extends BaseActivity {
         
         imagebutton_abortar_viagem.setVisibility(View.GONE);
         imagebutton_finalizar_viagem.setVisibility(View.GONE);
+        
+        menuSelecionado(MenuIdentificador.Viagem);
     }
 
     private void controles()
@@ -214,7 +217,7 @@ public class Viagem extends BaseActivity {
 
 		if(edittext_contador.length() < 6)
 		{
-			mensagens.append("Contador da catraca inválido.\n");
+			mensagens.append("Informe o seis digitos da catraca.\n");
 			edittext_contador.setFocusable(true);
 			valido = false;
 		}
@@ -237,10 +240,5 @@ public class Viagem extends BaseActivity {
 			mensagem(mensagens.toString());
 
 		return valido;
-	}
-
-	@Override
-	public void onBackPressed() {
-		mensagem("Não é possível sair da aplicação.");
 	}
 }

@@ -1,5 +1,6 @@
 package br.sptrans.transportepublico.painel;
 
+import br.sptrans.transportepublico.identificador.MenuIdentificador;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -49,15 +50,12 @@ public class Lotacao extends BaseActivity {
                 atualizaStatus(5);
             }
         });
+        
+        menuSelecionado(MenuIdentificador.Lotacao);
     }
 
     void atualizaStatus(int nivel) {
         ProgressBar status = (ProgressBar) findViewById(R.lotacao.status);
         status.setProgress(nivel);
-    }
-
-    @Override
-    public void onBackPressed() {
-        mensagem("Não é possível sair da aplicação.");
     }
 }
