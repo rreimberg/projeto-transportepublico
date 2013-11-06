@@ -3,17 +3,19 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:weightSum="7">
 
     <fragment class="br.sptrans.transportepublico.painel.MenuFragment"
-              android:id="@+id/menu" android:layout_weight="1"
-              android:layout_width="0px" android:layout_height="match_parent"
+              android:id="@+id/menu" android:layout_weight="6"
+              android:layout_width="match_parent" android:layout_height="match_parent"
               tools:layout="@layout/simple_list_item_activated_1"
               android:layout_gravity="center_vertical"/>
 
     <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
         <ImageButton
                 android:id="@+tela_lotacao/imagebutton_assentos_livres"
