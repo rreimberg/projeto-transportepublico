@@ -105,7 +105,7 @@
         android:layout_alignLeft="@+tela_viagem/textview_contador"
         android:layout_below="@+tela_viagem/textview_contador"
         android:layout_marginTop="24dp"
-        android:text="Data/Hora de Ínicio:"
+        android:text="Data/Hora de Início:"
         android:textSize="25dp" />
 
 

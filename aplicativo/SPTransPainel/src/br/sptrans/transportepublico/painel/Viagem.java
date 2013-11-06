@@ -1,5 +1,6 @@
 package br.sptrans.transportepublico.painel;
 
+import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
@@ -179,7 +180,7 @@ public class Viagem extends BaseActivity {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				textview_inicio_valor.setText(Calendar.getInstance().getTime().toString());
+				textview_inicio_valor.setText(DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime()).toString());
 				imagebutton_iniciar_viagem.setBackgroundColor(Color.RED);
 				imagebutton_iniciar_viagem.setText("Finalizar\nViagem");
 				VIAGEM_INICIADA = true;
@@ -224,14 +225,14 @@ public class Viagem extends BaseActivity {
 		
 		if(edittext_prefixo_linha_valor.length() < 5)
 		{
-			mensagens.append("Prefixo do �nibus incorreto.\n");
+			mensagens.append("Prefixo do ônibus incorreto.\n");
 			edittext_contador.setFocusable(true);
 			valido = false;
 		}
 		
 		if(edittext_prefixo_linha_valor.getText() == null || edittext_prefixo_linha_valor.length() == 0)
 		{
-			mensagens.append("Informe o prefixo do ve�culo\n");
+			mensagens.append("Informe o prefixo do veículo\n");
 			edittext_prefixo_linha_valor.setFocusable(true);
 			valido = false;
 		}
