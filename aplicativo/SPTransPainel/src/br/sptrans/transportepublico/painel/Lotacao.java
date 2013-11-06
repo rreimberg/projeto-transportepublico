@@ -32,7 +32,7 @@ public class Lotacao extends BaseActivity {
                             ((ImageButton)findViewById(LotacaoIdentificador.getControleId())).setBackgroundColor(Color.parseColor(LotacaoIdentificador.getCorId()));
                     }
 
-                    SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Lotacao.this, "Lotação", "Confirma um envio de alerta de lotação?");
+                    SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Lotacao.this, "Lotação", "Deseja enviar esta informaçao de Lotaçao?");
                     simplesDialogoControle.setPositiveButton("Sim", new android.content.DialogInterface.OnClickListener(
                     ) {
 

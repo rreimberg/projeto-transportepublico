@@ -31,7 +31,7 @@ public class Transito extends BaseActivity {
 							((ImageButton)findViewById(transitoIdentificador.getControleId())).setBackgroundColor(Color.parseColor(transitoIdentificador.getCorId()));
 					}
 					
-					SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Transito.this, "Trânsito", "Confirma um envio de alerta de trânsito?");
+					SimplesDialogoControle simplesDialogoControle = new SimplesDialogoControle(Transito.this, "Trânsito", "Deseja enviar esta informação de Trânsito?");
 					simplesDialogoControle.setPositiveButton("Sim", new android.content.DialogInterface.OnClickListener(
 							) {
 						
