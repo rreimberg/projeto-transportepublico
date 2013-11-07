@@ -28,7 +28,8 @@
         android:layout_alignBottom="@+tela_viagem/edittext_codigo_linha"
         android:layout_alignTop="@+tela_viagem/edittext_codigo_linha"
         android:layout_toRightOf="@+tela_viagem/edittext_codigo_linha"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/viagem_lupa"
+        android:background="@android:color/transparent" />
 
     <EditText
         android:id="@+tela_viagem/edittext_contador"
@@ -88,7 +89,7 @@
         android:layout_below="@+tela_viagem/textview_destino_descricao"
         android:layout_marginTop="19dp"
         android:inputType="number"
-        android:text="Contador catraca:"
+        android:text="Inicio catraca:"
         android:textSize="25dp" />
 
     <TextView
@@ -98,17 +99,7 @@
         android:layout_alignBaseline="@+tela_viagem/textview_inicio_descricao"
         android:layout_alignBottom="@+tela_viagem/textview_inicio_descricao"
         android:layout_alignLeft="@+tela_viagem/edittext_contador"
-        android:text="Aguardando início da viagem..."
-        android:textSize="25dp" />
-
-    <TextView
-        android:id="@+tela_viagem/textview_inicio_descricao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+tela_viagem/textview_contador"
-        android:layout_below="@+tela_viagem/textview_contador"
-        android:layout_marginTop="24dp"
-        android:text="Data/Hora de Início:"
+        android:text="-"
         android:textSize="25dp" />
 
 
@@ -119,8 +110,7 @@
         android:layout_alignTop="@+tela_viagem/textview_codigo_linha"
         android:layout_marginLeft="64dp"
         android:layout_toRightOf="@+tela_viagem/textview_codigo_linha"
-        android:ems="10"
-        android:text="695H" >
+        android:ems="10" >
     </EditText>
 
         <Button
@@ -184,7 +174,6 @@
             android:layout_alignBaseline="@+tela_viagem/textview_prefixo_linha_descricao"
             android:layout_alignBottom="@+tela_viagem/textview_prefixo_linha_descricao"
             android:layout_alignLeft="@+tela_viagem/edittext_codigo_linha"
-            android:text="62127"
             android:inputType="number"
         	android:maxLength="5"
             android:ems="10"/>
@@ -198,6 +187,38 @@
             android:layout_marginTop="43dp"
             android:text="Prefixo do Ônibus:"
             android:textSize="25dp" />
+
+        <TextView
+            android:id="@+tela_viagem/textview_inicio_descricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/TextView01"
+            android:layout_below="@+id/TextView01"
+            android:layout_marginTop="18dp"
+            android:text="Data/Hora de Início:"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+tela_viagem/textview_contador"
+            android:layout_below="@+tela_viagem/textview_contador"
+            android:layout_marginTop="18dp"
+            android:inputType="number"
+            android:text="Fim catraca:"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+tela_viagem/edittext_contador_fim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView01"
+            android:layout_alignBottom="@+id/TextView01"
+            android:layout_alignLeft="@+tela_viagem/textview_inicio_valor"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="6" />
 
 </RelativeLayout>
 

@@ -30,7 +30,7 @@
         android:id="@+tela_alerta/button_ataque"
         style="@style/estilo_botao_alerta"
         android:layout_toRightOf="@+tela_alerta/button_roubo"
-        android:src="@drawable/alerta_outros"/>
+        android:src="@drawable/alerta_danos"/>
 
     <ImageButton
         android:id="@+tela_alerta/button_som_alto"

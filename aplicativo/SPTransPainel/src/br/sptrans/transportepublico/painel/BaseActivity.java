@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -74,14 +75,21 @@ public class BaseActivity extends Activity{
 	
 	protected void esconderTeclado()
 	{
-		try
-		{
-			InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE); 
-			inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
-		}
-		catch (Exception e) {
+		Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+			
+			@Override
+			public void run() {
+				try
+				{
+					InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE); 
+					inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+				}
+				catch (Exception e) {
 
-		}
+				}		
+			}
+		}, 900);
 	}
 	
 	protected void menuSelecionado(MenuIdentificador viagem)
@@ -95,7 +103,7 @@ public class BaseActivity extends Activity{
     }
 	
 	@Override
-    public void onBackPressed() {
-        //mensagem("Não é possível sair da aplicação.");
-    }
+	public void onBackPressed() {
+		
+	}
 }

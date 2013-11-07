@@ -19,6 +19,8 @@ public class Transito extends BaseActivity {
         setContentView(R.layout.tela_transito);
         menuSelecionado(MenuIdentificador.Transito);
         
+        
+        
         for (final TransitoIdentificador item : TransitoIdentificador.retornaTudo()) {
 			((ImageButton)findViewById(item.getControleId())).setOnClickListener(new OnClickListener() {
 				

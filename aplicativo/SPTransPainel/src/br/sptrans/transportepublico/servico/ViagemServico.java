@@ -12,7 +12,11 @@ import br.sptrans.transportepublico.webservice.WebService;
 
 public class ViagemServico {
 
-private Activity _activity;
+	private Activity _activity;
+	private static  ViagemServico _instanciaServico;
+	private boolean _viagemIniciada = false;
+	
+	public ViagemServico(){}
 	
 	public ViagemServico(Activity activity) {
 		_activity = activity;
@@ -26,21 +30,29 @@ private Activity _activity;
 		
 		String json = new WebService(_activity, url).webGet();
 		return new LinhaMapeamento().deJson(json);
-		/*
-		LinhaModelo linhaModelo = new LinhaModelo();
-		linhaModelo.setCodigoLinha("1196");
-		linhaModelo.setDenominacaoTPTS("Herplin");
-		linhaModelo.setDenominacaoTSTP("Praça");
-		linhaModelo.setSentido(2);
-		linhaModelo.setTipo("10");
-		linhaModelo.setEmpresa(1);
-		List<LinhaModelo> linhaModelos = new ArrayList<LinhaModelo>();
-		linhaModelos.add(linhaModelo);
-		return linhaModelos;*/
 	}
 	
 	public void inserirViagem(ViagemModelo viagemModelo)
 	{
 		new ViagemRepositorio(_activity).inserir(viagemModelo);
 	}
+	
+	public static ViagemServico getInstance()
+	{
+		if(ViagemServico._instanciaServico == null)
+		{
+			ViagemServico._instanciaServico = new ViagemServico();
+		}
+		return ViagemServico._instanciaServico;
+	}
+
+	
+	public boolean ViagemIniciada() {
+		return _viagemIniciada;
+	}
+
+	public void ViagemIniciada(boolean _viagemIniciada) {
+		this._viagemIniciada = _viagemIniciada;
+	}
+
 }

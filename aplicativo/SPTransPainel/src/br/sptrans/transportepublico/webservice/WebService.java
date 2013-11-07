@@ -88,7 +88,13 @@ public class WebService{
         } 
         catch (Exception e) 
         {
-        	Log.e(TAG_LOG, e.getMessage());
+        	activity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				Toast.makeText(activity,"Falha de conexão com a internet.", Toast.LENGTH_LONG).show();
+			}
+		});
         }
  
         return ret;
