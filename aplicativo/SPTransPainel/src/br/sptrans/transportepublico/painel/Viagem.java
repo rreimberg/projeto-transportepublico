@@ -326,12 +326,6 @@ public class Viagem extends BaseActivity {
 			valido = false;
 		}
 		
-		if (Integer.parseInt(edittext_contador_fim.getText().toString()) < Integer.parseInt(edittext_contador.getText().toString()))
-		{
-			mensagens.append("Contador da catraca inválido.");
-			edittext_contador_fim.requestFocus();
-			valido = false;
-		}
 		if(!valido)
 			mensagem(mensagens.toString());
 
