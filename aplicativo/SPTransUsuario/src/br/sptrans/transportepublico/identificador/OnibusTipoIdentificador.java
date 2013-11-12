@@ -15,8 +15,8 @@ public class OnibusTipoIdentificador extends BaseIdentificador<Integer>{
 	}
 
 	public static OnibusTipoIdentificador Indefinido = new OnibusTipoIdentificador("Indefinido",1,R.drawable.desconhecido);
-	public static OnibusTipoIdentificador Padrao = new OnibusTipoIdentificador("Padr„o",2,R.drawable.comum);
-	public static OnibusTipoIdentificador MicroOnibus = new OnibusTipoIdentificador("Micro-‘nibus",3,R.drawable.microonibus);
+	public static OnibusTipoIdentificador Padrao = new OnibusTipoIdentificador("Padr√£o",2,R.drawable.comum);
+	public static OnibusTipoIdentificador MicroOnibus = new OnibusTipoIdentificador("Micro-√¥nibus",3,R.drawable.microonibus);
 	public static OnibusTipoIdentificador Articulado = new OnibusTipoIdentificador("Articulado",4,R.drawable.articulado);
 	public static OnibusTipoIdentificador BiArticulado = new OnibusTipoIdentificador("Bi-Articulado",5,R.drawable.biarticulado);
 	

@@ -43,7 +43,7 @@ public class NotificacaoDistanciaServico extends Service implements Runnable{
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		Log.e("CoO", "Ativo");
 		recebeLinha(intent);
-		criarNotificacao("Calculando ônibus mais próximo", "", "Ativando monitoração...",0);
+		criarNotificacao("Calculando ï¿½nibus mais prï¿½ximo", "", "Ativando monitoraï¿½ï¿½o...",0);
 		run();
 		
 		countDownTimer = new CountDownTimer(20000,1000) {
@@ -115,8 +115,9 @@ public class NotificacaoDistanciaServico extends Service implements Runnable{
 	        .setProgress(0, 0, true);
 		 
 		 builder.setContentIntent(resultPendingIntent);
-		 NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		 mNotificationManager.notify(1, builder.build());
+		 //NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+		 //mNotificationManager.notify(1, builder.build());
+		 startForeground(1, builder.build());
 	  }
 	
 
@@ -204,7 +205,15 @@ public class NotificacaoDistanciaServico extends Service implements Runnable{
 								ids += linhaModelo.getCodigoLinha() + ",";
 							}
 						}
-						return  new OnibusProximoServico(getApplicationContext()).pesquisaOnibusProximo(ids, PONTO_SELECIONADO);
+						try
+						{
+							return  new OnibusProximoServico(getApplicationContext()).pesquisaOnibusProximo(ids, PONTO_SELECIONADO);
+						}
+						catch(Exception ex)
+						{
+							Log.e("CoO", ex.getMessage());
+							return null;
+						}
 					}
 					
 					@Override
@@ -219,8 +228,8 @@ public class NotificacaoDistanciaServico extends Service implements Runnable{
 						if(result == null || result.getBusPrefix() == 0)
 						{
 							criarNotificacao(
-									"Cadê o Ônibus?",
-									"Parece que nenhum ônibus está próximo a você",
+									"CadÃª o Ã”nibus?",
+									"Parece que nenhum Ã”nibus estÃ¡ prÃ³ximo a este ponto",
 									"Ops!",0);
 							return;
 						}
@@ -229,8 +238,8 @@ public class NotificacaoDistanciaServico extends Service implements Runnable{
 						String onibusTipoIdentificador = OnibusTipoIdentificador.getNome(result.getBusType());
 						
 						criarNotificacao(String.format("%s - Prefixo: %s", result.getPrefix() + "-" + result.getPrefixType(),result.getBusPrefix()),
-								String.format("Um ônibus do tipo '%s' esta á %s km(s)", onibusTipoIdentificador, result.getDistance()),
-								"Monitoração ativada",result.getBusPrefix());
+								String.format("Um Ã”nibus do tipo '%s' esta Ã¡ %s km(s)", onibusTipoIdentificador, result.getDistance()),
+								"MonitoraÃ§Ã£o ativada",result.getBusPrefix());
 						
 						if(Double.parseDouble(result.getDistance()) < 2.0)
 						{
